@@ -185,6 +185,19 @@ html[dir="rtl"] .steps span{font-size:15px; line-height:1.6}
 .kgrid span::after{content:" ↗"; color:var(--bronze)}
 @media(max-width:900px){.kgrid{grid-template-columns:1fr 1fr}}
 
+/* ana sayfa: gerçek proje kartları */
+.rgrid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
+.rkart{text-decoration:none; color:inherit; display:flex; flex-direction:column; gap:6px}
+.rkart .im{aspect-ratio:4/3; overflow:hidden; background:var(--bg-2); margin-bottom:8px}
+.rkart img{width:100%; height:100%; object-fit:cover; transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.rkart:hover img{transform:scale(1.04)}
+.rkart .k{font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--bronze); font-weight:600}
+html[dir="rtl"] .rkart .k{letter-spacing:0}
+.rkart b{font-family:var(--f-serif); font-weight:500; font-size:21px; line-height:1.25}
+html[dir="rtl"] .rkart b{font-size:17px; font-weight:600; line-height:1.5}
+@media(max-width:900px){.rgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.rgrid{grid-template-columns:1fr}}
+
 /* koyu bant */
 .dark{background:var(--dark); color:var(--dark-ink); border-top:none !important}
 .dark p{color:var(--dark-muted)}
@@ -276,6 +289,16 @@ legend{font-size:12px; font-weight:600; letter-spacing:.08em; text-transform:upp
 .side li{margin-bottom:10px}
 .side .mail{margin-top:26px; padding-top:20px; border-top:1px solid rgba(239,231,220,.18); font-size:14px; color:var(--dark-muted)}
 .side .mail a{color:var(--dark-ink); display:block; margin-top:6px; font-size:16px; word-break:break-all}
+
+/* form: tuzak alan, durum, teşekkür */
+.hp{position:absolute; inset-inline-start:-10000px; width:1px; height:1px; overflow:hidden}
+.fdurum{margin:14px 0 0; font-size:14px; color:var(--bronze)}
+.btn:disabled{opacity:.55; cursor:progress}
+.tesekkur{background:var(--card); border:1px solid var(--line); padding:clamp(28px,5vw,48px); align-self:start}
+.tesekkur[hidden]{display:none}
+.tesekkur .k{font-size:28px; color:var(--bronze); margin-bottom:12px}
+.tesekkur h2{margin-bottom:12px}
+.tesekkur p{color:var(--muted); margin:0; max-width:52ch}
 
 /* altbilgi */
 footer{background:var(--dark); color:var(--dark-muted); padding-block:64px 28px; font-size:14px}

@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600&family=Noto+Kufi+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../stil.css">
+<link rel="stylesheet" href="../stil.css?v=f7ed7f44">
 
 </head>
 <body>
@@ -118,21 +118,38 @@
   <label>Ölçek<input name="f_olcek" placeholder="ör. 40 oda + lobi + restoran / 120 kişilik kafe / 350 m² villa"></label>
   <fieldset><legend>İstenen hizmet</legend><div class="chips"><label><input type="radio" name="f_kapsam" value="Tasarım + üretim + montaj" required>Tasarım + üretim + montaj</label><label><input type="radio" name="f_kapsam" value="Mimarın çizimine göre üretim + montaj">Mimarın çizimine göre üretim + montaj</label><label><input type="radio" name="f_kapsam" value="Sadece üretim">Sadece üretim</label><label><input type="radio" name="f_kapsam" value="Henüz emin değilim">Henüz emin değilim</label></div></fieldset>
   <label>Proje hakkında<textarea name="f_not" placeholder="Mekân, konsept, bütçe aralığı, özel istekler…"></textarea></label>
+  <div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
   <button class="btn" type="submit">Brief&#x27;i e-postayla gönder <span class="ar" aria-hidden="true">→</span></button>
   <p class="fnote">Buton, bilgileri doldurulmuş bir e-posta taslağı açar. Plan ve görselleri o e-postaya ekleyebilirsiniz.</p>
+  <p class="fdurum" role="status" aria-live="polite" hidden></p>
 </form>
+<div class="tesekkur" id="tesekkur" hidden tabindex="-1"><span class="k">✓</span><h2>Brief&#x27;iniz bize ulaştı.</h2><p>Teşekkürler. Brief&#x27;inizi okuyup en kısa sürede e-postayla dönüyoruz. Plan veya görsel göndermek isterseniz o e-postayı yanıtlamanız yeterli.</p></div>
 <aside class="side"><h3>Brief&#x27;ten sonra ne olur</h3><ol><li>Brief&#x27;inizi okuyup eksik bilgi varsa soruyoruz.</li><li>Kısa bir tanışma görüşmesi (çevrimiçi ya da sahada).</li><li>Kapsam listesi, yol haritası ve teklif çerçevesi.</li></ol>
   <div class="mail">Doğrudan yazmak isterseniz<a href="mailto:info@luya-collection.com">info@luya-collection.com</a></div></aside>
 </div></section>
 <script>
 (function(){var f=document.getElementById('brief'),L={"f_tip": "Proje tipi", "f_ad": "Ad Soyad", "f_firma": "Firma / Kurum", "f_rol": "Rolünüz", "f_eposta": "E-posta", "f_tel": "Telefon / WhatsApp", "f_konum": "Proje konumu (şehir, ülke)", "f_olcek": "Ölçek", "f_asama": "Proje aşaması", "f_tarih": "Hedef açılış / teslim", "f_kapsam": "İstenen hizmet", "f_not": "Proje hakkında"},
-TO="info@luya-collection.com",SUB="LUYA Projects brief";
-f.addEventListener('submit',function(ev){ev.preventDefault();
- if(!f.checkValidity()){f.reportValidity();return;}
- var d=new FormData(f),satir=[],k;
+TO="info@luya-collection.com",SUB="LUYA Projects brief",
+UC="",DIL="tr",
+MSG={"yuk": "Gönderiliyor…", "hata": "Gönderim şu an tamamlanamadı; e-posta taslağı açılıyor, oradan gönderebilirsiniz."},
+t0=Date.now(),durum=f.querySelector('.fdurum'),btn=f.querySelector('button[type=submit]');
+function taslak(d){var satir=[],k;
  for(k in L){var v=(d.get(k)||'').toString().trim(); if(v) satir.push(L[k]+': '+v);}
  var s=SUB+' — '+(d.get('f_tip')||'')+(d.get('f_konum')?' — '+d.get('f_konum'):'');
- location.href='mailto:'+TO+'?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(satir.join('\n'));
+ location.href='mailto:'+TO+'?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(satir.join('\n'));}
+f.addEventListener('submit',function(ev){ev.preventDefault();
+ if(!f.checkValidity()){f.reportValidity();return;}
+ var d=new FormData(f);
+ if(!UC){taslak(d);return;}
+ var veri={dil:DIL,sayfa:location.href,sure:Math.round((Date.now()-t0)/1000),website:d.get('website')||''},k;
+ for(k in L)veri[k]=(d.get(k)||'').toString().trim();
+ btn.disabled=true;durum.hidden=false;durum.textContent=MSG.yuk;
+ fetch(UC,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(veri)})
+  .then(function(r){return r.json()})
+  .then(function(j){if(!j||!j.ok)throw 0;
+    f.hidden=true;var t=document.getElementById('tesekkur');t.hidden=false;t.focus();
+    try{window.scrollTo({top:t.getBoundingClientRect().top+scrollY-120})}catch(e){}})
+  .catch(function(){durum.textContent=MSG.hata;btn.disabled=false;setTimeout(function(){taslak(d)},1200)});
 });})();
 </script>
 </main>

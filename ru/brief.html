@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600&family=Noto+Kufi+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../stil.css">
+<link rel="stylesheet" href="../stil.css?v=f7ed7f44">
 
 </head>
 <body>
@@ -118,21 +118,38 @@
   <label>Масштаб<input name="f_olcek" placeholder="напр. 40 номеров + лобби + ресторан / кафе на 120 мест / вилла 350 м²"></label>
   <fieldset><legend>Требуемые услуги</legend><div class="chips"><label><input type="radio" name="f_kapsam" value="Дизайн + производство + монтаж" required>Дизайн + производство + монтаж</label><label><input type="radio" name="f_kapsam" value="Производство + монтаж по чертежам архитектора">Производство + монтаж по чертежам архитектора</label><label><input type="radio" name="f_kapsam" value="Только производство">Только производство</label><label><input type="radio" name="f_kapsam" value="Пока не определились">Пока не определились</label></div></fieldset>
   <label>О проекте<textarea name="f_not" placeholder="Объект, концепция, бюджетный диапазон, особые пожелания…"></textarea></label>
+  <div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
   <button class="btn" type="submit">Отправить бриф по e-mail <span class="ar" aria-hidden="true">→</span></button>
   <p class="fnote">Кнопка откроет черновик письма с заполненными данными. К нему можно приложить планировки и визуализации.</p>
+  <p class="fdurum" role="status" aria-live="polite" hidden></p>
 </form>
+<div class="tesekkur" id="tesekkur" hidden tabindex="-1"><span class="k">✓</span><h2>Мы получили ваш бриф.</h2><p>Спасибо. Мы изучим бриф и в ближайшее время ответим по электронной почте. Чтобы отправить планы или изображения, просто ответьте на это письмо.</p></div>
 <aside class="side"><h3>Что происходит после брифа</h3><ol><li>Изучаем бриф и уточняем недостающую информацию.</li><li>Короткая вводная встреча (онлайн или на объекте).</li><li>Перечень работ, дорожная карта и рамочное коммерческое предложение.</li></ol>
   <div class="mail">Если удобнее написать напрямую<a href="mailto:info@luya-collection.com">info@luya-collection.com</a></div></aside>
 </div></section>
 <script>
 (function(){var f=document.getElementById('brief'),L={"f_tip": "Тип проекта", "f_ad": "Имя и фамилия", "f_firma": "Компания / организация", "f_rol": "Ваша роль", "f_eposta": "E-mail", "f_tel": "Телефон / WhatsApp", "f_konum": "Локация проекта (город, страна)", "f_olcek": "Масштаб", "f_asama": "Стадия проекта", "f_tarih": "Плановая дата открытия / сдачи", "f_kapsam": "Требуемые услуги", "f_not": "О проекте"},
-TO="info@luya-collection.com",SUB="LUYA Projects brief";
-f.addEventListener('submit',function(ev){ev.preventDefault();
- if(!f.checkValidity()){f.reportValidity();return;}
- var d=new FormData(f),satir=[],k;
+TO="info@luya-collection.com",SUB="LUYA Projects brief",
+UC="",DIL="ru",
+MSG={"yuk": "Отправляем…", "hata": "Сейчас отправить не удалось; открываем черновик письма, чтобы вы могли отправить бриф из почты."},
+t0=Date.now(),durum=f.querySelector('.fdurum'),btn=f.querySelector('button[type=submit]');
+function taslak(d){var satir=[],k;
  for(k in L){var v=(d.get(k)||'').toString().trim(); if(v) satir.push(L[k]+': '+v);}
  var s=SUB+' — '+(d.get('f_tip')||'')+(d.get('f_konum')?' — '+d.get('f_konum'):'');
- location.href='mailto:'+TO+'?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(satir.join('\n'));
+ location.href='mailto:'+TO+'?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(satir.join('\n'));}
+f.addEventListener('submit',function(ev){ev.preventDefault();
+ if(!f.checkValidity()){f.reportValidity();return;}
+ var d=new FormData(f);
+ if(!UC){taslak(d);return;}
+ var veri={dil:DIL,sayfa:location.href,sure:Math.round((Date.now()-t0)/1000),website:d.get('website')||''},k;
+ for(k in L)veri[k]=(d.get(k)||'').toString().trim();
+ btn.disabled=true;durum.hidden=false;durum.textContent=MSG.yuk;
+ fetch(UC,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(veri)})
+  .then(function(r){return r.json()})
+  .then(function(j){if(!j||!j.ok)throw 0;
+    f.hidden=true;var t=document.getElementById('tesekkur');t.hidden=false;t.focus();
+    try{window.scrollTo({top:t.getBoundingClientRect().top+scrollY-120})}catch(e){}})
+  .catch(function(){durum.textContent=MSG.hata;btn.disabled=false;setTimeout(function(){taslak(d)},1200)});
 });})();
 </script>
 </main>

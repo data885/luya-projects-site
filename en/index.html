@@ -120,7 +120,7 @@ from drawing to install.</h1></div>
  ADIM=2.7, KAYMA=0.35;
 var v=document.querySelector('.hero-video'),ust=document.getElementById('heroUst'),bas=document.getElementById('heroBaslik'),
     kutu=document.querySelector('.hero-metin'),simdi=0,bekle=null;
-if(v&&ust&&bas&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){
+if(v&&ust&&bas){
   function olc(){var asil=bas.textContent,enb=0;bas.style.minHeight='';
     SERI.forEach(function(x){bas.textContent=x[1];enb=Math.max(enb,bas.offsetHeight)});
     bas.textContent=SERI[simdi][1];bas.style.minHeight=enb+'px';}
@@ -135,13 +135,18 @@ if(v&&ust&&bas&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce
 }
 })();
 (function(){var v=document.querySelector('.hero-video'),b=document.querySelector('.vid-btn');if(!v||!b)return;
-var az=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches,
-    tasarruf=navigator.connection&&navigator.connection.saveData;
+var elle=false;  /* ziyaretçi düğmeyle durdurduysa otomatik başlatma */
 function durum(oynuyor){b.setAttribute('aria-label',oynuyor?b.dataset.durdur:b.dataset.oynat);
   b.firstChild.textContent=oynuyor?'❚❚':'▶';}
-if(az||tasarruf){v.removeAttribute('autoplay');v.pause();v.preload='none';durum(false);}
-b.addEventListener('click',function(){if(v.paused){v.play();durum(true)}else{v.pause();durum(false)}});
+function baslat(){if(elle||!v.paused)return;v.muted=true;var p=v.play();if(p&&p.catch)p.catch(function(){});}
+var olaylar=['pointerdown','touchstart','keydown','scroll','wheel'];
+function ilkEtkilesim(){baslat();olaylar.forEach(function(o){window.removeEventListener(o,ilkEtkilesim,true)});}
+olaylar.forEach(function(o){window.addEventListener(o,ilkEtkilesim,{capture:true,passive:true})});
+baslat();v.addEventListener('loadeddata',baslat);v.addEventListener('canplay',baslat);
+document.addEventListener('visibilitychange',function(){if(!document.hidden)baslat()});
+b.addEventListener('click',function(ev){ev.stopPropagation();if(v.paused){elle=false;v.play();}else{elle=true;v.pause();}});
 v.addEventListener('play',function(){durum(true)});v.addEventListener('pause',function(){durum(false)});
+durum(!v.paused);
 })();
 </script>
 <section id="sectors"><div class="wrap">

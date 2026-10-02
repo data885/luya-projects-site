@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600&family=Noto+Kufi+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../stil.css?v=f7ed7f44">
+<link rel="stylesheet" href="../stil.css?v=714c58d7">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "LUYA Projects", "url": "https://luyaprojects.com", "email": "info@luya-collection.com", "description": "We design, manufacture and install furniture for hotel, restaurant, café, villa, airport and office projects. One point of contact from drawing to installation.", "parentOrganization": {"@type": "Organization", "name": "LUYA Collection", "url": "https://www.luya-collection.com"}, "address": {"@type": "PostalAddress", "addressLocality": "Istanbul", "addressCountry": "TR"}}</script>
 </head>
 <body>
@@ -101,14 +101,31 @@
 </header>
 <main id="main">
 
-<div class="hero"><img src="../gorsel/koleksiyon/kavena-bar-hero.webp" alt="" fetchpriority="high">
+<div class="hero">
+  <video class="hero-video" muted loop playsinline autoplay preload="auto" poster="../gorsel/video/tanitim-kapak.webp" aria-hidden="true">
+    <source src="../gorsel/video/tanitim-720.mp4" type="video/mp4" media="(max-width: 800px)">
+    <source src="../gorsel/video/tanitim-1080.webm" type="video/webm">
+    <source src="../gorsel/video/tanitim-1080.mp4" type="video/mp4">
+  </video>
+  <button class="vid-btn" type="button" aria-label="Pause video" data-durdur="Pause video" data-oynat="Play video"><span aria-hidden="true">❚❚</span></button>
   <div class="wrap"><span class="eyebrow">LUYA PROJECTS · CONTRACT &amp; HOSPITALITY</span><h1>Furniture for the space,
 from drawing to install.</h1>
   <p class="lede">We design furniture for hotel, restaurant, café, villa, airport and office projects, build it in our own workshop and install it on site. One point of contact for architects, owners and contractors.</p>
   <div class="ctas"><a class="btn light" href="brief.html">Send a project brief <span class="ar" aria-hidden="true">→</span></a>
   <a class="btn lightghost" href="process.html">How we work</a></div></div>
-  <span class="tag">Collection render</span>
+  <span class="tag">From our completed projects</span>
 </div>
+<script>
+(function(){var v=document.querySelector('.hero-video'),b=document.querySelector('.vid-btn');if(!v||!b)return;
+var az=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches,
+    tasarruf=navigator.connection&&navigator.connection.saveData;
+function durum(oynuyor){b.setAttribute('aria-label',oynuyor?b.dataset.durdur:b.dataset.oynat);
+  b.firstChild.textContent=oynuyor?'❚❚':'▶';}
+if(az||tasarruf){v.removeAttribute('autoplay');v.pause();v.preload='none';durum(false);}
+b.addEventListener('click',function(){if(v.paused){v.play();durum(true)}else{v.pause();durum(false)}});
+v.addEventListener('play',function(){durum(true)});v.addEventListener('pause',function(){durum(false)});
+})();
+</script>
 <section id="sectors"><div class="wrap">
   <div class="shead"><div><span class="num">01</span><h2>Where we work</h2></div><p>Every sector puts a different load on furniture: a hotel room sees hundreds of guests a year, a restaurant chair is pulled out dozens of times a day, an airport bench is never empty. We design for the real load of use.</p></div>
   <div class="sgrid"><a class="scard" href="hotels.html"><div class="im"><img src="../gorsel/koleksiyon/avelu-bar.webp" alt="Hotel &amp; Resort" loading="lazy" decoding="async"></div>

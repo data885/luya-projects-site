@@ -110,7 +110,9 @@ html[dir="rtl"] .eyebrow,html[dir="rtl"] .btn,html[dir="rtl"] .k,html[dir="rtl"]
 
 /* ---------- hero ---------- */
 .hero{position:relative; min-height:min(88vh,860px); display:flex; align-items:flex-end; color:var(--dark-ink); background:var(--dark)}
-.hero>img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
+.hero>img,.hero-video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
+.vid-btn{position:absolute; z-index:3; inset-inline-end:var(--gut); top:20px; width:40px; height:40px; border-radius:50%; border:1px solid rgba(239,231,220,.45); background:rgba(29,22,18,.35); color:var(--dark-ink); font-size:12px; cursor:pointer; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(4px)}
+.vid-btn:hover{border-color:var(--dark-ink)}
 .hero::after{content:""; position:absolute; inset:0;
   background:linear-gradient(180deg,rgba(29,22,18,.2) 0%,rgba(29,22,18,.35) 35%,rgba(29,22,18,.9) 100%),
     linear-gradient(90deg,rgba(29,22,18,.55) 0%,rgba(29,22,18,0) 65%)}

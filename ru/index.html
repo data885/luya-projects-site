@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600&family=Noto+Kufi+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../stil.css?v=f7ed7f44">
+<link rel="stylesheet" href="../stil.css?v=714c58d7">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "LUYA Projects", "url": "https://luyaprojects.com", "email": "info@luya-collection.com", "description": "Проектируем, производим и монтируем мебель для отелей, ресторанов, кафе, вилл, аэропортов и офисов. Один подрядчик — от чертежа до монтажа.", "parentOrganization": {"@type": "Organization", "name": "LUYA Collection", "url": "https://www.luya-collection.com"}, "address": {"@type": "PostalAddress", "addressLocality": "Istanbul", "addressCountry": "TR"}}</script>
 </head>
 <body>
@@ -101,14 +101,31 @@
 </header>
 <main id="main">
 
-<div class="hero"><img src="../gorsel/koleksiyon/kavena-bar-hero.webp" alt="" fetchpriority="high">
+<div class="hero">
+  <video class="hero-video" muted loop playsinline autoplay preload="auto" poster="../gorsel/video/tanitim-kapak.webp" aria-hidden="true">
+    <source src="../gorsel/video/tanitim-720.mp4" type="video/mp4" media="(max-width: 800px)">
+    <source src="../gorsel/video/tanitim-1080.webm" type="video/webm">
+    <source src="../gorsel/video/tanitim-1080.mp4" type="video/mp4">
+  </video>
+  <button class="vid-btn" type="button" aria-label="Остановить видео" data-durdur="Остановить видео" data-oynat="Воспроизвести видео"><span aria-hidden="true">❚❚</span></button>
   <div class="wrap"><span class="eyebrow">LUYA PROJECTS · CONTRACT &amp; HOSPITALITY</span><h1>Мебель для вашего объекта —
 от чертежа до монтажа.</h1>
   <p class="lede">Проектируем мебель для отелей, ресторанов, кафе, вилл, аэропортов и офисов, изготавливаем её на собственном производстве и монтируем на объекте. Одна точка ответственности для архитектора, инвестора и генподрядчика.</p>
   <div class="ctas"><a class="btn light" href="brief.html">Отправить бриф проекта <span class="ar" aria-hidden="true">→</span></a>
   <a class="btn lightghost" href="process.html">Как мы работаем</a></div></div>
-  <span class="tag">Рендер из коллекции</span>
+  <span class="tag">Из наших реализованных проектов</span>
 </div>
+<script>
+(function(){var v=document.querySelector('.hero-video'),b=document.querySelector('.vid-btn');if(!v||!b)return;
+var az=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches,
+    tasarruf=navigator.connection&&navigator.connection.saveData;
+function durum(oynuyor){b.setAttribute('aria-label',oynuyor?b.dataset.durdur:b.dataset.oynat);
+  b.firstChild.textContent=oynuyor?'❚❚':'▶';}
+if(az||tasarruf){v.removeAttribute('autoplay');v.pause();v.preload='none';durum(false);}
+b.addEventListener('click',function(){if(v.paused){v.play();durum(true)}else{v.pause();durum(false)}});
+v.addEventListener('play',function(){durum(true)});v.addEventListener('pause',function(){durum(false)});
+})();
+</script>
 <section id="sectors"><div class="wrap">
   <div class="shead"><div><span class="num">01</span><h2>С какими объектами мы работаем</h2></div><p>У каждого сегмента своя нагрузка: гостиничный номер за год принимает сотни гостей, ресторанный стул двигают десятки раз за день, скамья в аэропорту не пустует никогда. Мы проектируем мебель под реальную эксплуатационную нагрузку.</p></div>
   <div class="sgrid"><a class="scard" href="hotels.html"><div class="im"><img src="../gorsel/koleksiyon/avelu-bar.webp" alt="Отели и курорты" loading="lazy" decoding="async"></div>

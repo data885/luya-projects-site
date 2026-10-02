@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600&family=Noto+Kufi+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../stil.css?v=f7ed7f44">
+<link rel="stylesheet" href="../stil.css?v=714c58d7">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "LUYA Projects", "url": "https://luyaprojects.com", "email": "info@luya-collection.com", "description": "نصمّم الأثاث ونصنّعه ونركّبه في الموقع لمشاريع الفنادق والمطاعم والمقاهي والفلل والمطارات والمكاتب. جهة واحدة مسؤولة من الرسم حتى التركيب.", "parentOrganization": {"@type": "Organization", "name": "LUYA Collection", "url": "https://www.luya-collection.com"}, "address": {"@type": "PostalAddress", "addressLocality": "Istanbul", "addressCountry": "TR"}}</script>
 </head>
 <body>
@@ -101,14 +101,31 @@
 </header>
 <main id="main">
 
-<div class="hero"><img src="../gorsel/koleksiyon/kavena-bar-hero.webp" alt="" fetchpriority="high">
+<div class="hero">
+  <video class="hero-video" muted loop playsinline autoplay preload="auto" poster="../gorsel/video/tanitim-kapak.webp" aria-hidden="true">
+    <source src="../gorsel/video/tanitim-720.mp4" type="video/mp4" media="(max-width: 800px)">
+    <source src="../gorsel/video/tanitim-1080.webm" type="video/webm">
+    <source src="../gorsel/video/tanitim-1080.mp4" type="video/mp4">
+  </video>
+  <button class="vid-btn" type="button" aria-label="إيقاف الفيديو" data-durdur="إيقاف الفيديو" data-oynat="تشغيل الفيديو"><span aria-hidden="true">❚❚</span></button>
   <div class="wrap"><span class="eyebrow">LUYA PROJECTS · أثاث العقود والضيافة</span><h1>أثاث المكان،
 من الرسم حتى التركيب.</h1>
   <p class="lede">نصمّم الأثاث لمشاريع الفنادق والمطاعم والمقاهي والفلل والمطارات والمكاتب، ونصنّعه في مصانعنا، ونركّبه في الموقع. جهة واحدة يتعامل معها المعماري والمستثمر والمقاول.</p>
   <div class="ctas"><a class="btn light" href="brief.html">أرسل موجز المشروع <span class="ar" aria-hidden="true">→</span></a>
   <a class="btn lightghost" href="process.html">كيف نعمل</a></div></div>
-  <span class="tag">تصوّر من المجموعة</span>
+  <span class="tag">من مشاريعنا المنجزة</span>
 </div>
+<script>
+(function(){var v=document.querySelector('.hero-video'),b=document.querySelector('.vid-btn');if(!v||!b)return;
+var az=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches,
+    tasarruf=navigator.connection&&navigator.connection.saveData;
+function durum(oynuyor){b.setAttribute('aria-label',oynuyor?b.dataset.durdur:b.dataset.oynat);
+  b.firstChild.textContent=oynuyor?'❚❚':'▶';}
+if(az||tasarruf){v.removeAttribute('autoplay');v.pause();v.preload='none';durum(false);}
+b.addEventListener('click',function(){if(v.paused){v.play();durum(true)}else{v.pause();durum(false)}});
+v.addEventListener('play',function(){durum(true)});v.addEventListener('pause',function(){durum(false)});
+})();
+</script>
 <section id="sectors"><div class="wrap">
   <div class="shead"><div><span class="num">01</span><h2>المشاريع التي نعمل عليها</h2></div><p>لكل قطاع أعباؤه الخاصة: غرفة الفندق تستقبل مئات النزلاء سنوياً، وكرسي المطعم يُسحب عشرات المرات يومياً، ومقعد المطار لا يخلو أبداً. لذلك نصمّم الأثاث وفق الحِمل الفعلي للاستخدام.</p></div>
   <div class="sgrid"><a class="scard" href="hotels.html"><div class="im"><img src="../gorsel/koleksiyon/avelu-bar.webp" alt="الفنادق والمنتجعات" loading="lazy" decoding="async"></div>

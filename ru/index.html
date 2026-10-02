@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600&family=Noto+Kufi+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../stil.css?v=714c58d7">
+<link rel="stylesheet" href="../stil.css?v=1fbdd67a">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "LUYA Projects", "url": "https://luyaprojects.com", "email": "info@luya-collection.com", "description": "Проектируем, производим и монтируем мебель для отелей, ресторанов, кафе, вилл, аэропортов и офисов. Один подрядчик — от чертежа до монтажа.", "parentOrganization": {"@type": "Organization", "name": "LUYA Collection", "url": "https://www.luya-collection.com"}, "address": {"@type": "PostalAddress", "addressLocality": "Istanbul", "addressCountry": "TR"}}</script>
 </head>
 <body>
@@ -108,14 +108,32 @@
     <source src="../gorsel/video/tanitim2-1080.mp4" type="video/mp4">
   </video>
   <button class="vid-btn" type="button" aria-label="Остановить видео" data-durdur="Остановить видео" data-oynat="Воспроизвести видео"><span aria-hidden="true">❚❚</span></button>
-  <div class="wrap"><span class="eyebrow">LUYA PROJECTS · CONTRACT &amp; HOSPITALITY</span><h1>Мебель для вашего объекта —
-от чертежа до монтажа.</h1>
+  <div class="wrap"><div class="hero-metin"><span class="eyebrow" id="heroUst">LUYA PROJECTS · CONTRACT &amp; HOSPITALITY</span><h1 id="heroBaslik">Мебель для вашего объекта —
+от чертежа до монтажа.</h1></div>
   <p class="lede">Проектируем мебель для отелей, ресторанов, кафе, вилл, аэропортов и офисов, изготавливаем её на собственном производстве и монтируем на объекте. Одна точка ответственности для архитектора, инвестора и генподрядчика.</p>
   <div class="ctas"><a class="btn light" href="brief.html">Отправить бриф проекта <span class="ar" aria-hidden="true">→</span></a>
   <a class="btn lightghost" href="process.html">Как мы работаем</a></div></div>
   <span class="tag">Из наших реализованных проектов</span>
 </div>
 <script>
+(function(){var SERI=[["LUYA PROJECTS · CONTRACT & HOSPITALITY", "Мебель для вашего объекта —\nот чертежа до монтажа."], ["LUYA PROJECTS · ОФИС · БАКУ", "От кабинета руководителя\nдо ресепшена — один подрядчик."], ["LUYA PROJECTS · ОТЕЛИ", "Единый стандарт\nв каждом номере."], ["LUYA PROJECTS · ОБЩЕСТВЕННЫЕ ОБЪЕКТЫ", "Резьба, инкрустация, ручная работа:\nмастерство в деталях."], ["LUYA PROJECTS · ОФИСЫ", "По индивидуальным размерам\nв собственном цеху."], ["LUYA PROJECTS · РЕСТОРАНЫ И КАФЕ", "Для интенсивной эксплуатации,\nна долгие годы."], ["LUYA PROJECTS · ОФИС · БАКУ", "Из Турции —\nв Баку и Туркменистан."], ["LUYA PROJECTS · ОТЕЛИ", "Обсудим\nваш проект."]],
+ ADIM=2.7, KAYMA=0.35;
+var v=document.querySelector('.hero-video'),ust=document.getElementById('heroUst'),bas=document.getElementById('heroBaslik'),
+    kutu=document.querySelector('.hero-metin'),simdi=0,bekle=null;
+if(v&&ust&&bas&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){
+  function olc(){var asil=bas.textContent,enb=0;bas.style.minHeight='';
+    SERI.forEach(function(x){bas.textContent=x[1];enb=Math.max(enb,bas.offsetHeight)});
+    bas.textContent=SERI[simdi][1];bas.style.minHeight=enb+'px';}
+  function goster(n){if(n===simdi)return;simdi=n;kutu.classList.add('degis');clearTimeout(bekle);
+    bekle=setTimeout(function(){ust.textContent=SERI[n][0];bas.textContent=SERI[n][1];kutu.classList.remove('degis')},380);}
+  function kontrol(){goster(Math.max(0,Math.min(SERI.length-1,Math.floor((v.currentTime-KAYMA)/ADIM))))}
+  function dongu(){if(!v.paused)kontrol();requestAnimationFrame(dongu);}
+  v.addEventListener('timeupdate',kontrol);v.addEventListener('seeked',kontrol);
+  olc();var zz;window.addEventListener('resize',function(){clearTimeout(zz);zz=setTimeout(olc,200)});
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(olc);
+  requestAnimationFrame(dongu);
+}
+})();
 (function(){var v=document.querySelector('.hero-video'),b=document.querySelector('.vid-btn');if(!v||!b)return;
 var az=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches,
     tasarruf=navigator.connection&&navigator.connection.saveData;

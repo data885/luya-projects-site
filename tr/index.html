@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600&family=Noto+Kufi+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../stil.css?v=714c58d7">
+<link rel="stylesheet" href="../stil.css?v=1fbdd67a">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "LUYA Projects", "url": "https://luyaprojects.com", "email": "info@luya-collection.com", "description": "Otel, restoran, kafe, villa, havalimanı ve ofis projelerinde mobilyayı tasarlıyor, üretiyor ve sahada kuruyoruz. Çizimden montaja tek muhatap.", "parentOrganization": {"@type": "Organization", "name": "LUYA Collection", "url": "https://www.luya-collection.com"}, "address": {"@type": "PostalAddress", "addressLocality": "Istanbul", "addressCountry": "TR"}}</script>
 </head>
 <body>
@@ -108,14 +108,32 @@
     <source src="../gorsel/video/tanitim2-1080.mp4" type="video/mp4">
   </video>
   <button class="vid-btn" type="button" aria-label="Videoyu durdur" data-durdur="Videoyu durdur" data-oynat="Videoyu oynat"><span aria-hidden="true">❚❚</span></button>
-  <div class="wrap"><span class="eyebrow">LUYA PROJECTS · CONTRACT &amp; HOSPITALITY</span><h1>Mekânın mobilyası,
-çizimden montaja.</h1>
+  <div class="wrap"><div class="hero-metin"><span class="eyebrow" id="heroUst">LUYA PROJECTS · CONTRACT &amp; HOSPITALITY</span><h1 id="heroBaslik">Mekânın mobilyası,
+çizimden montaja.</h1></div>
   <p class="lede">Otel, restoran, kafe, villa, havalimanı ve ofis projelerinde mobilyayı tasarlıyor, kendi üretimimizde yapıyor ve sahada kuruyoruz. Mimara, yatırımcıya ve yükleniciye tek muhatap.</p>
   <div class="ctas"><a class="btn light" href="brief.html">Proje brief&#x27;i gönder <span class="ar" aria-hidden="true">→</span></a>
   <a class="btn lightghost" href="process.html">Nasıl çalışıyoruz</a></div></div>
   <span class="tag">Gerçekleşmiş projelerimizden</span>
 </div>
 <script>
+(function(){var SERI=[["LUYA PROJECTS · CONTRACT & HOSPITALITY", "Mekânın mobilyası,\nçizimden montaja."], ["LUYA PROJECTS · OFİS · BAKÜ", "Yönetim katından\nresepsiyona, tek elden."], ["LUYA PROJECTS · OTEL", "Tek standart,\nher odada."], ["LUYA PROJECTS · KAMU & PRESTİJ", "Oyma, kakma, el işçiliği:\nustalık detayda."], ["LUYA PROJECTS · OFİS & KURUMSAL", "Özel ölçü,\nkendi atölyemizde."], ["LUYA PROJECTS · RESTORAN & KAFE", "Yoğun kullanıma göre\ntasarlanır, dayanır."], ["LUYA PROJECTS · OFİS · BAKÜ", "Türkiye'den Bakü'ye\nve Türkmenistan'a."], ["LUYA PROJECTS · OTEL", "Projenizi\nkonuşalım."]],
+ ADIM=2.7, KAYMA=0.35;
+var v=document.querySelector('.hero-video'),ust=document.getElementById('heroUst'),bas=document.getElementById('heroBaslik'),
+    kutu=document.querySelector('.hero-metin'),simdi=0,bekle=null;
+if(v&&ust&&bas&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){
+  function olc(){var asil=bas.textContent,enb=0;bas.style.minHeight='';
+    SERI.forEach(function(x){bas.textContent=x[1];enb=Math.max(enb,bas.offsetHeight)});
+    bas.textContent=SERI[simdi][1];bas.style.minHeight=enb+'px';}
+  function goster(n){if(n===simdi)return;simdi=n;kutu.classList.add('degis');clearTimeout(bekle);
+    bekle=setTimeout(function(){ust.textContent=SERI[n][0];bas.textContent=SERI[n][1];kutu.classList.remove('degis')},380);}
+  function kontrol(){goster(Math.max(0,Math.min(SERI.length-1,Math.floor((v.currentTime-KAYMA)/ADIM))))}
+  function dongu(){if(!v.paused)kontrol();requestAnimationFrame(dongu);}
+  v.addEventListener('timeupdate',kontrol);v.addEventListener('seeked',kontrol);
+  olc();var zz;window.addEventListener('resize',function(){clearTimeout(zz);zz=setTimeout(olc,200)});
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(olc);
+  requestAnimationFrame(dongu);
+}
+})();
 (function(){var v=document.querySelector('.hero-video'),b=document.querySelector('.vid-btn');if(!v||!b)return;
 var az=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches,
     tasarruf=navigator.connection&&navigator.connection.saveData;

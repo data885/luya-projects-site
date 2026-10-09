@@ -1,3 +1,124 @@
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(gorsel/font/CormorantGaramond-cyrillic.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(gorsel/font/CormorantGaramond-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(gorsel/font/CormorantGaramond-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(gorsel/font/CormorantGaramond-cyrillic.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(gorsel/font/CormorantGaramond-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(gorsel/font/CormorantGaramond-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(gorsel/font/Manrope-cyrillic.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(gorsel/font/Manrope-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(gorsel/font/Manrope-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(gorsel/font/Manrope-cyrillic.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(gorsel/font/Manrope-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(gorsel/font/Manrope-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(gorsel/font/Manrope-cyrillic.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(gorsel/font/Manrope-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(gorsel/font/Manrope-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root{
   color-scheme: light;
   --bg:#f4efe8; --bg-2:#ebe4da; --card:#faf7f2;
@@ -97,11 +218,11 @@ nav.main .btn[aria-current]:hover{color:var(--ink)}
 /* ---------- tipografi ---------- */
 .eyebrow{font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--bronze);
   font-weight:600; display:block; margin-bottom:20px}
-h1,h2,h3{font-family:var(--f-serif); font-weight:500; margin:0}
-h1{font-size:clamp(40px,6.4vw,82px); line-height:1.02; letter-spacing:-.01em; white-space:pre-line; text-wrap:balance}
+h1,h2,h3,.h1{font-family:var(--f-serif); font-weight:500; margin:0}
+h1,.h1{font-size:clamp(40px,6.4vw,82px); line-height:1.02; letter-spacing:-.01em; white-space:pre-line; text-wrap:balance}
 h2{font-size:clamp(30px,3.8vw,48px); line-height:1.08; text-wrap:balance}
 h3{font-size:clamp(22px,2vw,26px); line-height:1.2}
-html[dir="rtl"] h1{font-size:clamp(32px,5vw,60px); line-height:1.35; font-weight:600}
+html[dir="rtl"] h1,html[dir="rtl"] .h1{font-size:clamp(32px,5vw,60px); line-height:1.35; font-weight:600}
 html[dir="rtl"] h2{font-size:clamp(26px,3.2vw,38px); line-height:1.4; font-weight:600}
 html[dir="rtl"] h3{font-size:19px; line-height:1.5; font-weight:600}
 html[dir="rtl"] .eyebrow,html[dir="rtl"] .btn,html[dir="rtl"] .k,html[dir="rtl"] .num{letter-spacing:0}
@@ -110,7 +231,9 @@ html[dir="rtl"] .eyebrow,html[dir="rtl"] .btn,html[dir="rtl"] .k,html[dir="rtl"]
 
 /* ---------- hero ---------- */
 .hero{position:relative; min-height:min(88vh,860px); display:flex; align-items:flex-end; color:var(--dark-ink); background:var(--dark)}
-.hero>img,.hero-video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
+.hero>img,.hero-video,.hero-kapak{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
+.hero-video{opacity:0; transition:opacity .6s ease}
+.hero-video.oynuyor{opacity:1}
 .vid-btn{position:absolute; z-index:3; inset-inline-end:var(--gut); top:20px; width:40px; height:40px; border-radius:50%; border:1px solid rgba(239,231,220,.45); background:rgba(29,22,18,.35); color:var(--dark-ink); font-size:12px; cursor:pointer; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(4px)}
 .vid-btn:hover{border-color:var(--dark-ink)}
 .hero::after{content:""; position:absolute; inset:0;
@@ -120,7 +243,9 @@ html[dir="rtl"] .eyebrow,html[dir="rtl"] .btn,html[dir="rtl"] .k,html[dir="rtl"]
 .hero .eyebrow{color:#d9c3a5}
 .hero-metin>*{transition:opacity .38s ease, transform .38s ease}
 .hero-metin.degis>*{opacity:0; transform:translateY(8px)}
-.hero-metin h1{display:flex; align-items:flex-end}
+.hkutu{display:grid; align-items:end}
+.hkutu>*{grid-area:1/1}
+.hayalet{visibility:hidden; pointer-events:none; user-select:none}
 @media(prefers-reduced-motion:reduce){.hero-metin>*{transition:none}}
 .hero .lede{color:var(--dark-muted)}
 .ctas{display:flex; flex-wrap:wrap; gap:12px; margin-top:34px}
@@ -310,8 +435,8 @@ legend{font-size:12px; font-weight:600; letter-spacing:.08em; text-transform:upp
 footer{background:var(--dark); color:var(--dark-muted); padding-block:64px 28px; font-size:14px}
 footer .cols{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:36px}
 footer .brand{color:var(--dark-ink); margin-bottom:18px}
-footer h4{font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--dark-ink); margin:0 0 14px; font-weight:600}
-html[dir="rtl"] footer h4{letter-spacing:0}
+footer .fh{font-family:var(--f-sans); font-size:11px; line-height:1.4; letter-spacing:.2em; text-transform:uppercase; color:var(--dark-ink); margin:0 0 14px; font-weight:600}
+html[dir="rtl"] footer .fh{letter-spacing:0; font-size:13px}
 footer ul{list-style:none; margin:0; padding:0}
 footer li{margin-bottom:8px}
 footer a{color:var(--dark-muted); text-decoration:none}

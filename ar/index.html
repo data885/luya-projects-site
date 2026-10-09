@@ -19,10 +19,9 @@
 <meta property="og:image" content="https://luyaprojects.com/gorsel/koleksiyon/kavena-bar-hero.webp">
 <meta name="theme-color" content="#1d1612">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600&family=Noto+Kufi+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../stil.css?v=1fbdd67a">
+<link rel="preload" href="../gorsel/font/NotoKufiArabic-arabic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../font-ar.css?v=40dd8e9a">
+<link rel="stylesheet" href="../stil.css?v=40dd8e9a">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "LUYA Projects", "url": "https://luyaprojects.com", "email": "info@luyaprojects.com", "description": "نصمّم الأثاث ونصنّعه ونركّبه في الموقع لمشاريع الفنادق والمطاعم والمقاهي والفلل والمطارات والمكاتب. جهة واحدة مسؤولة من الرسم حتى التركيب.", "parentOrganization": {"@type": "Organization", "name": "LUYA Collection", "url": "https://www.luya-collection.com"}, "address": {"@type": "PostalAddress", "addressLocality": "Istanbul", "addressCountry": "TR"}}</script>
 </head>
 <body>
@@ -102,14 +101,24 @@
 <main id="main">
 
 <div class="hero">
-  <video class="hero-video" muted loop playsinline autoplay preload="auto" poster="../gorsel/video/tanitim2-kapak.webp" aria-hidden="true">
-    <source src="../gorsel/video/tanitim2-720.mp4" type="video/mp4" media="(max-width: 800px)">
-    <source src="../gorsel/video/tanitim2-1080.webm" type="video/webm">
-    <source src="../gorsel/video/tanitim2-1080.mp4" type="video/mp4">
+  <picture><source media="(max-width: 800px)" srcset="../gorsel/video/tanitim2-kapak-960.webp">
+  <img class="hero-kapak" src="../gorsel/video/tanitim2-kapak.webp" alt="" fetchpriority="high" decoding="async"></picture>
+  <video class="hero-video" muted loop playsinline preload="none" aria-hidden="true">
+    <source data-src="../gorsel/video/tanitim2-480.mp4" type="video/mp4" data-media="(max-width: 800px)">
+    <source data-src="../gorsel/video/tanitim2-1080.webm" type="video/webm">
+    <source data-src="../gorsel/video/tanitim2-1080.mp4" type="video/mp4">
   </video>
   <button class="vid-btn" type="button" aria-label="إيقاف الفيديو" data-durdur="إيقاف الفيديو" data-oynat="تشغيل الفيديو"><span aria-hidden="true">❚❚</span></button>
-  <div class="wrap"><div class="hero-metin"><span class="eyebrow" id="heroUst">LUYA PROJECTS · أثاث العقود والضيافة</span><h1 id="heroBaslik">أثاث المكان،
-من الرسم حتى التركيب.</h1></div>
+  <div class="wrap"><div class="hero-metin"><div class="hkutu"><span class="eyebrow" id="heroUst">LUYA PROJECTS · أثاث العقود والضيافة</span><span class="eyebrow hayalet" aria-hidden="true">LUYA PROJECTS · أثاث العقود والضيافة</span><span class="eyebrow hayalet" aria-hidden="true">LUYA PROJECTS · مكاتب · باكو</span><span class="eyebrow hayalet" aria-hidden="true">LUYA PROJECTS · فنادق</span><span class="eyebrow hayalet" aria-hidden="true">LUYA PROJECTS · مبانٍ عامة ومعالم</span><span class="eyebrow hayalet" aria-hidden="true">LUYA PROJECTS · مكاتب وشركات</span><span class="eyebrow hayalet" aria-hidden="true">LUYA PROJECTS · مطاعم ومقاهٍ</span></div><div class="hkutu h1k"><h1 id="heroBaslik">أثاث المكان،
+من الرسم حتى التركيب.</h1><div class="h1 hayalet" aria-hidden="true">أثاث المكان،
+من الرسم حتى التركيب.</div><div class="h1 hayalet" aria-hidden="true">من قاعة الإدارة
+إلى الاستقبال، شريك واحد.</div><div class="h1 hayalet" aria-hidden="true">معيار واحد
+في كل غرفة.</div><div class="h1 hayalet" aria-hidden="true">نحت وتطعيم وعمل يدوي:
+الحِرفة في التفاصيل.</div><div class="h1 hayalet" aria-hidden="true">حسب المقاس
+في ورشتنا الخاصة.</div><div class="h1 hayalet" aria-hidden="true">مصمَّم للاستخدام الكثيف
+ومصنوع ليدوم.</div><div class="h1 hayalet" aria-hidden="true">من تركيا
+إلى باكو وتركمانستان.</div><div class="h1 hayalet" aria-hidden="true">لنتحدث
+عن مشروعكم.</div></div></div>
   <p class="lede">نصمّم الأثاث لمشاريع الفنادق والمطاعم والمقاهي والفلل والمطارات والمكاتب، ونصنّعه في مصانعنا، ونركّبه في الموقع. جهة واحدة يتعامل معها المعماري والمستثمر والمقاول.</p>
   <div class="ctas"><a class="btn light" href="brief.html">أرسل موجز المشروع <span class="ar" aria-hidden="true">→</span></a>
   <a class="btn lightghost" href="process.html">كيف نعمل</a></div></div>
@@ -121,20 +130,22 @@
 var v=document.querySelector('.hero-video'),ust=document.getElementById('heroUst'),bas=document.getElementById('heroBaslik'),
     kutu=document.querySelector('.hero-metin'),simdi=0,bekle=null;
 if(v&&ust&&bas){
-  function olc(){var asil=bas.textContent,enb=0;bas.style.minHeight='';
-    SERI.forEach(function(x){bas.textContent=x[1];enb=Math.max(enb,bas.offsetHeight)});
-    bas.textContent=SERI[simdi][1];bas.style.minHeight=enb+'px';}
   function goster(n){if(n===simdi)return;simdi=n;kutu.classList.add('degis');clearTimeout(bekle);
     bekle=setTimeout(function(){ust.textContent=SERI[n][0];bas.textContent=SERI[n][1];kutu.classList.remove('degis')},380);}
   function kontrol(){goster(Math.max(0,Math.min(SERI.length-1,Math.floor((v.currentTime-KAYMA)/ADIM))))}
   function dongu(){if(!v.paused)kontrol();requestAnimationFrame(dongu);}
   v.addEventListener('timeupdate',kontrol);v.addEventListener('seeked',kontrol);
-  olc();var zz;window.addEventListener('resize',function(){clearTimeout(zz);zz=setTimeout(olc,200)});
-  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(olc);
   requestAnimationFrame(dongu);
 }
 })();
 (function(){var v=document.querySelector('.hero-video'),b=document.querySelector('.vid-btn');if(!v||!b)return;
+var az=(navigator.connection&&navigator.connection.saveData)||matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(az){b.hidden=true;return;}
+function yukle(){var mob=matchMedia('(max-width: 800px)').matches,ilk=true;
+  [].slice.call(v.querySelectorAll('source')).forEach(function(s){var m=s.getAttribute('data-media');
+    if(m&&!mob){s.remove();return;} if(!m&&mob){s.remove();return;} s.src=s.getAttribute('data-src');});
+  v.preload='auto';v.load();baslat();}
+if(document.readyState==='complete')setTimeout(yukle,0);else window.addEventListener('load',function(){setTimeout(yukle,0)});
 var elle=false;  /* ziyaretçi düğmeyle durdurduysa otomatik başlatma */
 function durum(oynuyor){b.setAttribute('aria-label',oynuyor?b.dataset.durdur:b.dataset.oynat);
   b.firstChild.textContent=oynuyor?'❚❚':'▶';}
@@ -145,17 +156,17 @@ olaylar.forEach(function(o){window.addEventListener(o,ilkEtkilesim,{capture:true
 baslat();v.addEventListener('loadeddata',baslat);v.addEventListener('canplay',baslat);
 document.addEventListener('visibilitychange',function(){if(!document.hidden)baslat()});
 b.addEventListener('click',function(ev){ev.stopPropagation();if(v.paused){elle=false;v.play();}else{elle=true;v.pause();}});
-v.addEventListener('play',function(){durum(true)});v.addEventListener('pause',function(){durum(false)});
+v.addEventListener('play',function(){durum(true)});v.addEventListener('playing',function(){v.classList.add('oynuyor')});v.addEventListener('pause',function(){durum(false)});
 durum(!v.paused);
 })();
 </script>
 <section id="sectors"><div class="wrap">
   <div class="shead"><div><span class="num">01</span><h2>المشاريع التي نعمل عليها</h2></div><p>لكل قطاع أعباؤه الخاصة: غرفة الفندق تستقبل مئات النزلاء سنوياً، وكرسي المطعم يُسحب عشرات المرات يومياً، ومقعد المطار لا يخلو أبداً. لذلك نصمّم الأثاث وفق الحِمل الفعلي للاستخدام.</p></div>
-  <div class="sgrid"><a class="scard" href="hotels.html"><div class="im"><img src="../gorsel/koleksiyon/avelu-bar.webp" alt="الفنادق والمنتجعات" loading="lazy" decoding="async"></div>
-<div class="tx"><h3>الفنادق والمنتجعات</h3><p>أثاث الغرف والردهة والمطعم والبار والمساحات العامة. من الغرفة النموذجية حتى المنشأة كاملة.</p><span class="go">المزيد <span class="ar" aria-hidden="true">→</span></span></div></a><a class="scard" href="restaurants-cafes.html"><div class="im"><img src="../gorsel/koleksiyon/toreli-yemek-2.webp" alt="المطاعم والمقاهي" loading="lazy" decoding="async"></div>
-<div class="tx"><h3>المطاعم والمقاهي</h3><p>توزيع الجلسات، والبار، ومحطات الخدمة، والمساحات الخلفية. مصمّمة للاستخدام الكثيف.</p><span class="go">المزيد <span class="ar" aria-hidden="true">→</span></span></div></a><a class="scard" href="villas-residences.html"><div class="im"><img src="../gorsel/koleksiyon/dca-039.webp" alt="الفلل والمساكن" loading="lazy" decoding="async"></div>
-<div class="tx"><h3>الفلل والمساكن</h3><p>أثاث منزلي متكامل جاهز للتسليم. من فيلا واحدة إلى جميع وحدات المشروع السكني.</p><span class="go">المزيد <span class="ar" aria-hidden="true">→</span></span></div></a><a class="scard" href="airports-terminals.html"><div class="im"><img src="../gorsel/koleksiyon/mekan-bolucu.webp" alt="المطارات والمحطات" loading="lazy" decoding="async"></div>
-<div class="tx"><h3>المطارات والمحطات</h3><p>مناطق الانتظار، والصالات، ومكاتب تسجيل الوصول والاستعلامات. مصمّمة للاستخدام على مدار الساعة.</p><span class="go">المزيد <span class="ar" aria-hidden="true">→</span></span></div></a><a class="scard" href="workplace.html"><div class="im"><img src="../gorsel/koleksiyon/soreli-akustik.webp" alt="المكاتب والمساحات التجارية" loading="lazy" decoding="async"></div>
+  <div class="sgrid"><a class="scard" href="hotels.html"><div class="im"><img src="../gorsel/projeler/otel/11.webp" srcset="../gorsel/projeler/otel/11-k.webp 720w, ../gorsel/projeler/otel/11.webp 1600w" sizes="(max-width: 800px) 100vw, 33vw" alt="الفنادق والمنتجعات" loading="lazy" decoding="async"></div>
+<div class="tx"><h3>الفنادق والمنتجعات</h3><p>أثاث الغرف والردهة والمطعم والبار والمساحات العامة. من الغرفة النموذجية حتى المنشأة كاملة.</p><span class="go">المزيد <span class="ar" aria-hidden="true">→</span></span></div></a><a class="scard" href="restaurants-cafes.html"><div class="im"><img src="../gorsel/projeler/restoran-kafe/14.webp" srcset="../gorsel/projeler/restoran-kafe/14-k.webp 720w, ../gorsel/projeler/restoran-kafe/14.webp 1600w" sizes="(max-width: 800px) 100vw, 33vw" alt="المطاعم والمقاهي" loading="lazy" decoding="async"></div>
+<div class="tx"><h3>المطاعم والمقاهي</h3><p>توزيع الجلسات، والبار، ومحطات الخدمة، والمساحات الخلفية. مصمّمة للاستخدام الكثيف.</p><span class="go">المزيد <span class="ar" aria-hidden="true">→</span></span></div></a><a class="scard" href="villas-residences.html"><div class="im"><img src="../gorsel/projeler/mutfak-banyo/06.webp" srcset="../gorsel/projeler/mutfak-banyo/06-k.webp 720w, ../gorsel/projeler/mutfak-banyo/06.webp 1600w" sizes="(max-width: 800px) 100vw, 33vw" alt="الفلل والمساكن" loading="lazy" decoding="async"></div>
+<div class="tx"><h3>الفلل والمساكن</h3><p>أثاث منزلي متكامل جاهز للتسليم. من فيلا واحدة إلى جميع وحدات المشروع السكني.</p><span class="go">المزيد <span class="ar" aria-hidden="true">→</span></span></div></a><a class="scard" href="airports-terminals.html"><div class="im"><img src="../gorsel/koleksiyon/mekan-bolucu.webp" srcset="../gorsel/koleksiyon/mekan-bolucu-k.webp 720w, ../gorsel/koleksiyon/mekan-bolucu.webp 1536w" sizes="(max-width: 800px) 100vw, 33vw" alt="المطارات والمحطات" loading="lazy" decoding="async"></div>
+<div class="tx"><h3>المطارات والمحطات</h3><p>مناطق الانتظار، والصالات، ومكاتب تسجيل الوصول والاستعلامات. مصمّمة للاستخدام على مدار الساعة.</p><span class="go">المزيد <span class="ar" aria-hidden="true">→</span></span></div></a><a class="scard" href="workplace.html"><div class="im"><img src="../gorsel/projeler/baku-genel-merkez/01.webp" srcset="../gorsel/projeler/baku-genel-merkez/01-k.webp 720w, ../gorsel/projeler/baku-genel-merkez/01.webp 1600w" sizes="(max-width: 800px) 100vw, 33vw" alt="المكاتب والمساحات التجارية" loading="lazy" decoding="async"></div>
 <div class="tx"><h3>المكاتب والمساحات التجارية</h3><p>طوابق الإدارة التنفيذية، والاجتماعات، والاستقبال، والمساحات الاجتماعية. المتاجر وصالات العرض.</p><span class="go">المزيد <span class="ar" aria-hidden="true">→</span></span></div></a><a class="scard cta" href="brief.html"><div class="tx">
 <h3>لنتحدّث عن مشروعكم</h3><p>أرسلوا المخططات أو الصور التصوّرية أو قائمة الغرف، أو أي مستندات متوفرة. نحدّد النطاق معاً ونعود إليكم بخارطة طريق وإطار للعرض السعري.</p><span class="go">أرسل موجز المشروع <span class="ar" aria-hidden="true">→</span></span></div></a></div>
 </div></section>
@@ -175,7 +186,7 @@ durum(!v.paused);
 </div></section>
 <section><div class="wrap">
   <div class="shead"><div><span class="num">05</span><h2>من المجموعة إلى المشروع</h2></div><p>يمكن إنتاج تصاميم LUYA Collection على نطاق المشاريع، أو إعادة تفسيرها بما يتناسب مع هوية المشروع. فيما يلي بعض الأمثلة من المجموعة.</p></div>
-  <div class="kgrid"><a href="https://www.luya-collection.com/urun/avelu-bar-unitesi" rel="noopener"><div class="im"><img src="../gorsel/koleksiyon/avelu-bar.webp" alt="جدار خزائن وميني بار لغرفة الفندق" loading="lazy" decoding="async"></div><span>جدار خزائن وميني بار لغرفة الفندق</span></a><a href="https://www.luya-collection.com/urun/kavena-bar-unitesi" rel="noopener"><div class="im"><img src="../gorsel/koleksiyon/kavena-bar-use2.webp" alt="وحدة صالة / بار" loading="lazy" decoding="async"></div><span>وحدة صالة / بار</span></a><a href="https://www.luya-collection.com/urun/soreli-akustik-kabin" rel="noopener"><div class="im"><img src="../gorsel/koleksiyon/soreli-akustik.webp" alt="كابينة صوتية" loading="lazy" decoding="async"></div><span>كابينة صوتية</span></a><a href="https://www.luya-collection.com/urun/toreli-yemek-masasi" rel="noopener"><div class="im"><img src="../gorsel/koleksiyon/toreli-yemek-1.webp" alt="طاولة طعام للمطاعم" loading="lazy" decoding="async"></div><span>طاولة طعام للمطاعم</span></a></div>
+  <div class="kgrid"><a href="https://www.luya-collection.com/urun/avelu-bar-unitesi" rel="noopener"><div class="im"><img src="../gorsel/koleksiyon/avelu-bar.webp" srcset="../gorsel/koleksiyon/avelu-bar-k.webp 720w, ../gorsel/koleksiyon/avelu-bar.webp 1024w" sizes="(max-width: 800px) 50vw, 25vw" alt="جدار خزائن وميني بار لغرفة الفندق" loading="lazy" decoding="async"></div><span>جدار خزائن وميني بار لغرفة الفندق</span></a><a href="https://www.luya-collection.com/urun/kavena-bar-unitesi" rel="noopener"><div class="im"><img src="../gorsel/koleksiyon/kavena-bar-use2.webp" srcset="../gorsel/koleksiyon/kavena-bar-use2-k.webp 720w, ../gorsel/koleksiyon/kavena-bar-use2.webp 1536w" sizes="(max-width: 800px) 50vw, 25vw" alt="وحدة صالة / بار" loading="lazy" decoding="async"></div><span>وحدة صالة / بار</span></a><a href="https://www.luya-collection.com/urun/soreli-akustik-kabin" rel="noopener"><div class="im"><img src="../gorsel/koleksiyon/soreli-akustik.webp" alt="كابينة صوتية" loading="lazy" decoding="async"></div><span>كابينة صوتية</span></a><a href="https://www.luya-collection.com/urun/toreli-yemek-masasi" rel="noopener"><div class="im"><img src="../gorsel/koleksiyon/toreli-yemek-1.webp" srcset="../gorsel/koleksiyon/toreli-yemek-1-k.webp 720w, ../gorsel/koleksiyon/toreli-yemek-1.webp 1536w" sizes="(max-width: 800px) 50vw, 25vw" alt="طاولة طعام للمطاعم" loading="lazy" decoding="async"></div><span>طاولة طعام للمطاعم</span></a></div>
   <div class="more"><a class="btn ghost" href="https://www.luya-collection.com" rel="noopener">اكتشف LUYA Collection ↗</a></div>
 </div></section>
 <section class="dark"><div class="wrap band">
@@ -244,15 +255,15 @@ durum(!v.paused);
     </g>
     </g>
 </svg></span><span class="sep" aria-hidden="true"></span><b aria-hidden="true">Projects</b><span class="sr">LUYA Projects</span></a><p>تصميم الأثاث وتصنيعه وتركيبه لمشاريع الفنادق والمطاعم والمقاهي والفلل والمطارات والمكاتب. ذراع المشاريع لدى LUYA Collection.</p></div>
-    <div><h4>القطاعات</h4><ul><li><a href="hotels.html">الفنادق والمنتجعات</a></li><li><a href="restaurants-cafes.html">المطاعم والمقاهي</a></li><li><a href="villas-residences.html">الفلل والمساكن</a></li><li><a href="airports-terminals.html">المطارات والمحطات</a></li><li><a href="workplace.html">المكاتب والمساحات التجارية</a></li></ul></div>
-    <div><h4>الصفحات</h4><ul>
+    <div><h2 class="fh">القطاعات</h2><ul><li><a href="hotels.html">الفنادق والمنتجعات</a></li><li><a href="restaurants-cafes.html">المطاعم والمقاهي</a></li><li><a href="villas-residences.html">الفلل والمساكن</a></li><li><a href="airports-terminals.html">المطارات والمحطات</a></li><li><a href="workplace.html">المكاتب والمساحات التجارية</a></li></ul></div>
+    <div><h2 class="fh">الصفحات</h2><ul>
       <li><a href="process.html">آلية العمل</a></li>
       <li><a href="production.html">التصنيع</a></li>
       <li><a href="projects.html">المشاريع</a></li>
       <li><a href="brief.html">أرسل الموجز</a></li></ul></div>
-    <div><h4>تواصل معنا</h4><ul>
+    <div><h2 class="fh">تواصل معنا</h2><ul>
       <li><a href="mailto:info@luyaprojects.com">info@luyaprojects.com</a></li></ul>
-      <h4 style="margin-top:28px">عائلة LUYA</h4><ul>
+      <h2 class="fh" style="margin-top:28px">عائلة LUYA</h2><ul>
       <li><a href="https://www.luya-collection.com" rel="noopener">LUYA Collection ↗</a></li></ul></div>
   </div>
   <div class="alt"><span>© 2026 LUYA Projects · إسطنبول</span><span>luyaprojects.com</span></div>

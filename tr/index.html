@@ -19,10 +19,8 @@
 <meta property="og:image" content="https://luyaprojects.com/gorsel/koleksiyon/kavena-bar-hero.webp">
 <meta name="theme-color" content="#1d1612">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600&family=Noto+Kufi+Arabic:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../stil.css?v=1fbdd67a">
+<link rel="preload" href="../gorsel/font/CormorantGaramond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../stil.css?v=40dd8e9a">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "LUYA Projects", "url": "https://luyaprojects.com", "email": "info@luyaprojects.com", "description": "Otel, restoran, kafe, villa, havalimanı ve ofis projelerinde mobilyayı tasarlıyor, üretiyor ve sahada kuruyoruz. Çizimden montaja tek muhatap.", "parentOrganization": {"@type": "Organization", "name": "LUYA Collection", "url": "https://www.luya-collection.com"}, "address": {"@type": "PostalAddress", "addressLocality": "Istanbul", "addressCountry": "TR"}}</script>
 </head>
 <body>
@@ -102,14 +100,24 @@
 <main id="main">
 
 <div class="hero">
-  <video class="hero-video" muted loop playsinline autoplay preload="auto" poster="../gorsel/video/tanitim2-kapak.webp" aria-hidden="true">
-    <source src="../gorsel/video/tanitim2-720.mp4" type="video/mp4" media="(max-width: 800px)">
-    <source src="../gorsel/video/tanitim2-1080.webm" type="video/webm">
-    <source src="../gorsel/video/tanitim2-1080.mp4" type="video/mp4">
+  <picture><source media="(max-width: 800px)" srcset="../gorsel/video/tanitim2-kapak-960.webp">
+  <img class="hero-kapak" src="../gorsel/video/tanitim2-kapak.webp" alt="" fetchpriority="high" decoding="async"></picture>
+  <video class="hero-video" muted loop playsinline preload="none" aria-hidden="true">
+    <source data-src="../gorsel/video/tanitim2-480.mp4" type="video/mp4" data-media="(max-width: 800px)">
+    <source data-src="../gorsel/video/tanitim2-1080.webm" type="video/webm">
+    <source data-src="../gorsel/video/tanitim2-1080.mp4" type="video/mp4">
   </video>
   <button class="vid-btn" type="button" aria-label="Videoyu durdur" data-durdur="Videoyu durdur" data-oynat="Videoyu oynat"><span aria-hidden="true">❚❚</span></button>
-  <div class="wrap"><div class="hero-metin"><span class="eyebrow" id="heroUst">LUYA PROJECTS · CONTRACT &amp; HOSPITALITY</span><h1 id="heroBaslik">Mekânın mobilyası,
-çizimden montaja.</h1></div>
+  <div class="wrap"><div class="hero-metin"><div class="hkutu"><span class="eyebrow" id="heroUst">LUYA PROJECTS · CONTRACT &amp; HOSPITALITY</span><span class="eyebrow hayalet" aria-hidden="true">LUYA PROJECTS · CONTRACT &amp; HOSPITALITY</span><span class="eyebrow hayalet" aria-hidden="true">LUYA PROJECTS · OFİS · BAKÜ</span><span class="eyebrow hayalet" aria-hidden="true">LUYA PROJECTS · OTEL</span><span class="eyebrow hayalet" aria-hidden="true">LUYA PROJECTS · KAMU &amp; PRESTİJ</span><span class="eyebrow hayalet" aria-hidden="true">LUYA PROJECTS · OFİS &amp; KURUMSAL</span><span class="eyebrow hayalet" aria-hidden="true">LUYA PROJECTS · RESTORAN &amp; KAFE</span></div><div class="hkutu h1k"><h1 id="heroBaslik">Mekânın mobilyası,
+çizimden montaja.</h1><div class="h1 hayalet" aria-hidden="true">Mekânın mobilyası,
+çizimden montaja.</div><div class="h1 hayalet" aria-hidden="true">Yönetim katından
+resepsiyona, tek elden.</div><div class="h1 hayalet" aria-hidden="true">Tek standart,
+her odada.</div><div class="h1 hayalet" aria-hidden="true">Oyma, kakma, el işçiliği:
+ustalık detayda.</div><div class="h1 hayalet" aria-hidden="true">Özel ölçü,
+kendi atölyemizde.</div><div class="h1 hayalet" aria-hidden="true">Yoğun kullanıma göre
+tasarlanır, dayanır.</div><div class="h1 hayalet" aria-hidden="true">Türkiye&#x27;den Bakü&#x27;ye
+ve Türkmenistan&#x27;a.</div><div class="h1 hayalet" aria-hidden="true">Projenizi
+konuşalım.</div></div></div>
   <p class="lede">Otel, restoran, kafe, villa, havalimanı ve ofis projelerinde mobilyayı tasarlıyor, kendi üretimimizde yapıyor ve sahada kuruyoruz. Mimara, yatırımcıya ve yükleniciye tek muhatap.</p>
   <div class="ctas"><a class="btn light" href="brief.html">Proje brief&#x27;i gönder <span class="ar" aria-hidden="true">→</span></a>
   <a class="btn lightghost" href="process.html">Nasıl çalışıyoruz</a></div></div>
@@ -121,20 +129,22 @@
 var v=document.querySelector('.hero-video'),ust=document.getElementById('heroUst'),bas=document.getElementById('heroBaslik'),
     kutu=document.querySelector('.hero-metin'),simdi=0,bekle=null;
 if(v&&ust&&bas){
-  function olc(){var asil=bas.textContent,enb=0;bas.style.minHeight='';
-    SERI.forEach(function(x){bas.textContent=x[1];enb=Math.max(enb,bas.offsetHeight)});
-    bas.textContent=SERI[simdi][1];bas.style.minHeight=enb+'px';}
   function goster(n){if(n===simdi)return;simdi=n;kutu.classList.add('degis');clearTimeout(bekle);
     bekle=setTimeout(function(){ust.textContent=SERI[n][0];bas.textContent=SERI[n][1];kutu.classList.remove('degis')},380);}
   function kontrol(){goster(Math.max(0,Math.min(SERI.length-1,Math.floor((v.currentTime-KAYMA)/ADIM))))}
   function dongu(){if(!v.paused)kontrol();requestAnimationFrame(dongu);}
   v.addEventListener('timeupdate',kontrol);v.addEventListener('seeked',kontrol);
-  olc();var zz;window.addEventListener('resize',function(){clearTimeout(zz);zz=setTimeout(olc,200)});
-  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(olc);
   requestAnimationFrame(dongu);
 }
 })();
 (function(){var v=document.querySelector('.hero-video'),b=document.querySelector('.vid-btn');if(!v||!b)return;
+var az=(navigator.connection&&navigator.connection.saveData)||matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(az){b.hidden=true;return;}
+function yukle(){var mob=matchMedia('(max-width: 800px)').matches,ilk=true;
+  [].slice.call(v.querySelectorAll('source')).forEach(function(s){var m=s.getAttribute('data-media');
+    if(m&&!mob){s.remove();return;} if(!m&&mob){s.remove();return;} s.src=s.getAttribute('data-src');});
+  v.preload='auto';v.load();baslat();}
+if(document.readyState==='complete')setTimeout(yukle,0);else window.addEventListener('load',function(){setTimeout(yukle,0)});
 var elle=false;  /* ziyaretçi düğmeyle durdurduysa otomatik başlatma */
 function durum(oynuyor){b.setAttribute('aria-label',oynuyor?b.dataset.durdur:b.dataset.oynat);
   b.firstChild.textContent=oynuyor?'❚❚':'▶';}
@@ -145,17 +155,17 @@ olaylar.forEach(function(o){window.addEventListener(o,ilkEtkilesim,{capture:true
 baslat();v.addEventListener('loadeddata',baslat);v.addEventListener('canplay',baslat);
 document.addEventListener('visibilitychange',function(){if(!document.hidden)baslat()});
 b.addEventListener('click',function(ev){ev.stopPropagation();if(v.paused){elle=false;v.play();}else{elle=true;v.pause();}});
-v.addEventListener('play',function(){durum(true)});v.addEventListener('pause',function(){durum(false)});
+v.addEventListener('play',function(){durum(true)});v.addEventListener('playing',function(){v.classList.add('oynuyor')});v.addEventListener('pause',function(){durum(false)});
 durum(!v.paused);
 })();
 </script>
 <section id="sectors"><div class="wrap">
   <div class="shead"><div><span class="num">01</span><h2>Hangi projelerde çalışıyoruz</h2></div><p>Her sektörün yükü farklı: otel odası yılda yüzlerce misafir görür, restoran sandalyesi günde onlarca kez çekilir, havalimanı bankı hiç boş kalmaz. Mobilyayı kullanımın gerçek yüküne göre tasarlıyoruz.</p></div>
-  <div class="sgrid"><a class="scard" href="hotels.html"><div class="im"><img src="../gorsel/koleksiyon/avelu-bar.webp" alt="Otel &amp; Resort" loading="lazy" decoding="async"></div>
-<div class="tx"><h3>Otel &amp; Resort</h3><p>Oda mobilyası, lobi, restoran-bar ve ortak alanlar. Tip odadan tüm tesise.</p><span class="go">Devamı <span class="ar" aria-hidden="true">→</span></span></div></a><a class="scard" href="restaurants-cafes.html"><div class="im"><img src="../gorsel/koleksiyon/toreli-yemek-2.webp" alt="Restoran &amp; Kafe" loading="lazy" decoding="async"></div>
-<div class="tx"><h3>Restoran &amp; Kafe</h3><p>Oturma düzeni, bar, servis istasyonu ve cephe arkası. Yoğun kullanıma göre.</p><span class="go">Devamı <span class="ar" aria-hidden="true">→</span></span></div></a><a class="scard" href="villas-residences.html"><div class="im"><img src="../gorsel/koleksiyon/dca-039.webp" alt="Villa &amp; Rezidans" loading="lazy" decoding="async"></div>
-<div class="tx"><h3>Villa &amp; Rezidans</h3><p>Anahtar teslim ev mobilyası. Tek villadan konut projesinin tüm dairelerine.</p><span class="go">Devamı <span class="ar" aria-hidden="true">→</span></span></div></a><a class="scard" href="airports-terminals.html"><div class="im"><img src="../gorsel/koleksiyon/mekan-bolucu.webp" alt="Havalimanı &amp; Terminal" loading="lazy" decoding="async"></div>
-<div class="tx"><h3>Havalimanı &amp; Terminal</h3><p>Bekleme alanları, lounge, check-in ve danışma bankoları. 7/24 kullanım için.</p><span class="go">Devamı <span class="ar" aria-hidden="true">→</span></span></div></a><a class="scard" href="workplace.html"><div class="im"><img src="../gorsel/koleksiyon/soreli-akustik.webp" alt="Ofis &amp; Ticari Alan" loading="lazy" decoding="async"></div>
+  <div class="sgrid"><a class="scard" href="hotels.html"><div class="im"><img src="../gorsel/projeler/otel/11.webp" srcset="../gorsel/projeler/otel/11-k.webp 720w, ../gorsel/projeler/otel/11.webp 1600w" sizes="(max-width: 800px) 100vw, 33vw" alt="Otel &amp; Resort" loading="lazy" decoding="async"></div>
+<div class="tx"><h3>Otel &amp; Resort</h3><p>Oda mobilyası, lobi, restoran-bar ve ortak alanlar. Tip odadan tüm tesise.</p><span class="go">Devamı <span class="ar" aria-hidden="true">→</span></span></div></a><a class="scard" href="restaurants-cafes.html"><div class="im"><img src="../gorsel/projeler/restoran-kafe/14.webp" srcset="../gorsel/projeler/restoran-kafe/14-k.webp 720w, ../gorsel/projeler/restoran-kafe/14.webp 1600w" sizes="(max-width: 800px) 100vw, 33vw" alt="Restoran &amp; Kafe" loading="lazy" decoding="async"></div>
+<div class="tx"><h3>Restoran &amp; Kafe</h3><p>Oturma düzeni, bar, servis istasyonu ve cephe arkası. Yoğun kullanıma göre.</p><span class="go">Devamı <span class="ar" aria-hidden="true">→</span></span></div></a><a class="scard" href="villas-residences.html"><div class="im"><img src="../gorsel/projeler/mutfak-banyo/06.webp" srcset="../gorsel/projeler/mutfak-banyo/06-k.webp 720w, ../gorsel/projeler/mutfak-banyo/06.webp 1600w" sizes="(max-width: 800px) 100vw, 33vw" alt="Villa &amp; Rezidans" loading="lazy" decoding="async"></div>
+<div class="tx"><h3>Villa &amp; Rezidans</h3><p>Anahtar teslim ev mobilyası. Tek villadan konut projesinin tüm dairelerine.</p><span class="go">Devamı <span class="ar" aria-hidden="true">→</span></span></div></a><a class="scard" href="airports-terminals.html"><div class="im"><img src="../gorsel/koleksiyon/mekan-bolucu.webp" srcset="../gorsel/koleksiyon/mekan-bolucu-k.webp 720w, ../gorsel/koleksiyon/mekan-bolucu.webp 1536w" sizes="(max-width: 800px) 100vw, 33vw" alt="Havalimanı &amp; Terminal" loading="lazy" decoding="async"></div>
+<div class="tx"><h3>Havalimanı &amp; Terminal</h3><p>Bekleme alanları, lounge, check-in ve danışma bankoları. 7/24 kullanım için.</p><span class="go">Devamı <span class="ar" aria-hidden="true">→</span></span></div></a><a class="scard" href="workplace.html"><div class="im"><img src="../gorsel/projeler/baku-genel-merkez/01.webp" srcset="../gorsel/projeler/baku-genel-merkez/01-k.webp 720w, ../gorsel/projeler/baku-genel-merkez/01.webp 1600w" sizes="(max-width: 800px) 100vw, 33vw" alt="Ofis &amp; Ticari Alan" loading="lazy" decoding="async"></div>
 <div class="tx"><h3>Ofis &amp; Ticari Alan</h3><p>Yönetici katı, toplantı, karşılama ve sosyal alanlar. Mağaza ve showroom.</p><span class="go">Devamı <span class="ar" aria-hidden="true">→</span></span></div></a><a class="scard cta" href="brief.html"><div class="tx">
 <h3>Projenizi konuşalım</h3><p>Plan, konsept görseli, oda listesi, ne varsa gönderin. Kapsamı birlikte netleştirip size bir yol haritası ve teklif çerçevesi dönelim.</p><span class="go">Proje brief&#x27;i gönder <span class="ar" aria-hidden="true">→</span></span></div></a></div>
 </div></section>
@@ -175,7 +185,7 @@ durum(!v.paused);
 </div></section>
 <section><div class="wrap">
   <div class="shead"><div><span class="num">05</span><h2>Koleksiyondan projeye</h2></div><p>LUYA Collection&#x27;daki tasarımlar proje ölçeğinde çoğaltılabilir, projenin kimliğine göre yeniden yorumlanabilir. Aşağıdakiler koleksiyondan birkaç örnek.</p></div>
-  <div class="kgrid"><a href="https://www.luya-collection.com/urun/avelu-bar-unitesi" rel="noopener"><div class="im"><img src="../gorsel/koleksiyon/avelu-bar.webp" alt="Otel odası minibar &amp; dolap duvarı" loading="lazy" decoding="async"></div><span>Otel odası minibar &amp; dolap duvarı</span></a><a href="https://www.luya-collection.com/urun/kavena-bar-unitesi" rel="noopener"><div class="im"><img src="../gorsel/koleksiyon/kavena-bar-use2.webp" alt="Lounge / bar ünitesi" loading="lazy" decoding="async"></div><span>Lounge / bar ünitesi</span></a><a href="https://www.luya-collection.com/urun/soreli-akustik-kabin" rel="noopener"><div class="im"><img src="../gorsel/koleksiyon/soreli-akustik.webp" alt="Akustik kabin" loading="lazy" decoding="async"></div><span>Akustik kabin</span></a><a href="https://www.luya-collection.com/urun/toreli-yemek-masasi" rel="noopener"><div class="im"><img src="../gorsel/koleksiyon/toreli-yemek-1.webp" alt="Restoran yemek masası" loading="lazy" decoding="async"></div><span>Restoran yemek masası</span></a></div>
+  <div class="kgrid"><a href="https://www.luya-collection.com/urun/avelu-bar-unitesi" rel="noopener"><div class="im"><img src="../gorsel/koleksiyon/avelu-bar.webp" srcset="../gorsel/koleksiyon/avelu-bar-k.webp 720w, ../gorsel/koleksiyon/avelu-bar.webp 1024w" sizes="(max-width: 800px) 50vw, 25vw" alt="Otel odası minibar &amp; dolap duvarı" loading="lazy" decoding="async"></div><span>Otel odası minibar &amp; dolap duvarı</span></a><a href="https://www.luya-collection.com/urun/kavena-bar-unitesi" rel="noopener"><div class="im"><img src="../gorsel/koleksiyon/kavena-bar-use2.webp" srcset="../gorsel/koleksiyon/kavena-bar-use2-k.webp 720w, ../gorsel/koleksiyon/kavena-bar-use2.webp 1536w" sizes="(max-width: 800px) 50vw, 25vw" alt="Lounge / bar ünitesi" loading="lazy" decoding="async"></div><span>Lounge / bar ünitesi</span></a><a href="https://www.luya-collection.com/urun/soreli-akustik-kabin" rel="noopener"><div class="im"><img src="../gorsel/koleksiyon/soreli-akustik.webp" alt="Akustik kabin" loading="lazy" decoding="async"></div><span>Akustik kabin</span></a><a href="https://www.luya-collection.com/urun/toreli-yemek-masasi" rel="noopener"><div class="im"><img src="../gorsel/koleksiyon/toreli-yemek-1.webp" srcset="../gorsel/koleksiyon/toreli-yemek-1-k.webp 720w, ../gorsel/koleksiyon/toreli-yemek-1.webp 1536w" sizes="(max-width: 800px) 50vw, 25vw" alt="Restoran yemek masası" loading="lazy" decoding="async"></div><span>Restoran yemek masası</span></a></div>
   <div class="more"><a class="btn ghost" href="https://www.luya-collection.com" rel="noopener">LUYA Collection&#x27;ı gör ↗</a></div>
 </div></section>
 <section class="dark"><div class="wrap band">
@@ -244,15 +254,15 @@ durum(!v.paused);
     </g>
     </g>
 </svg></span><span class="sep" aria-hidden="true"></span><b aria-hidden="true">Projects</b><span class="sr">LUYA Projects</span></a><p>Otel, restoran, kafe, villa, havalimanı ve ofis projeleri için mobilya tasarımı, üretimi ve montajı. LUYA Collection&#x27;ın proje birimi.</p></div>
-    <div><h4>Sektörler</h4><ul><li><a href="hotels.html">Otel &amp; Resort</a></li><li><a href="restaurants-cafes.html">Restoran &amp; Kafe</a></li><li><a href="villas-residences.html">Villa &amp; Rezidans</a></li><li><a href="airports-terminals.html">Havalimanı &amp; Terminal</a></li><li><a href="workplace.html">Ofis &amp; Ticari Alan</a></li></ul></div>
-    <div><h4>Sayfalar</h4><ul>
+    <div><h2 class="fh">Sektörler</h2><ul><li><a href="hotels.html">Otel &amp; Resort</a></li><li><a href="restaurants-cafes.html">Restoran &amp; Kafe</a></li><li><a href="villas-residences.html">Villa &amp; Rezidans</a></li><li><a href="airports-terminals.html">Havalimanı &amp; Terminal</a></li><li><a href="workplace.html">Ofis &amp; Ticari Alan</a></li></ul></div>
+    <div><h2 class="fh">Sayfalar</h2><ul>
       <li><a href="process.html">Süreç</a></li>
       <li><a href="production.html">Üretim</a></li>
       <li><a href="projects.html">Projeler</a></li>
       <li><a href="brief.html">Brief gönder</a></li></ul></div>
-    <div><h4>İletişim</h4><ul>
+    <div><h2 class="fh">İletişim</h2><ul>
       <li><a href="mailto:info@luyaprojects.com">info@luyaprojects.com</a></li></ul>
-      <h4 style="margin-top:28px">LUYA ailesi</h4><ul>
+      <h2 class="fh" style="margin-top:28px">LUYA ailesi</h2><ul>
       <li><a href="https://www.luya-collection.com" rel="noopener">LUYA Collection ↗</a></li></ul></div>
   </div>
   <div class="alt"><span>© 2026 LUYA Projects · İstanbul</span><span>luyaprojects.com</span></div>

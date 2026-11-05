@@ -20,8 +20,8 @@
 <meta name="theme-color" content="#1d1612">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../gorsel/font/NotoKufiArabic-arabic.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../font-ar.css?v=e67fd1e3">
-<link rel="stylesheet" href="../stil.css?v=e67fd1e3">
+<link rel="stylesheet" href="../font-ar.css?v=6dd9b740">
+<link rel="stylesheet" href="../stil.css?v=6dd9b740">
 
 </head>
 <body>
@@ -118,6 +118,7 @@
   <fieldset><legend>الخدمة المطلوبة</legend><div class="chips"><label><input type="radio" name="f_kapsam" value="تصميم + تصنيع + تركيب" required>تصميم + تصنيع + تركيب</label><label><input type="radio" name="f_kapsam" value="تصنيع + تركيب وفق رسومات المعماري">تصنيع + تركيب وفق رسومات المعماري</label><label><input type="radio" name="f_kapsam" value="تصنيع فقط">تصنيع فقط</label><label><input type="radio" name="f_kapsam" value="لم نحدّد بعد">لم نحدّد بعد</label></div></fieldset>
   <label>عن المشروع<textarea name="f_not" placeholder="المكان، المفهوم، نطاق الميزانية، متطلبات خاصة…"></textarea></label>
   <div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+  <label class="onay"><input type="checkbox" name="kvkk_onay" value="evet" required><span>قرأت <a href="privacy.html" target="_blank">إشعار الخصوصية</a>، وأعلم أن بياناتي ستُعالَج على النحو الموضح لتقييم موجزي.</span></label>
   <button class="btn" type="submit">أرسل الموجز بالبريد الإلكتروني <span class="ar" aria-hidden="true">→</span></button>
   <p class="fnote">يصل موجزكم مباشرةً إلى فريق المشاريع لدينا، ونردّ عليكم بالبريد الإلكتروني. يمكنكم إرفاق المخططات والصور في ردّكم على رسالتنا.</p>
   <p class="fdurum" role="status" aria-live="polite" hidden></p>
@@ -141,7 +142,7 @@ f.addEventListener('submit',function(ev){ev.preventDefault();
  if(!f.checkValidity()){f.reportValidity();return;}
  var d=new FormData(f);
  if(!UC){taslak(d);return;}
- var veri={dil:DIL,sayfa:location.href,sure:Math.round((Date.now()-t0)/1000),website:d.get('website')||''},k;
+ var veri={dil:DIL,sayfa:location.href,sure:Math.round((Date.now()-t0)/1000),website:d.get('website')||'',kvkk_onay:d.get('kvkk_onay')||''},k;
  for(k in L)veri[k]=(d.get(k)||'').toString().trim();
  btn.disabled=true;durum.hidden=false;durum.textContent=MSG.yuk;
  fetch(UC,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(veri)})
@@ -228,7 +229,7 @@ f.addEventListener('submit',function(ev){ev.preventDefault();
       <h2 class="fh" style="margin-top:28px">عائلة LUYA</h2><ul>
       <li><a href="https://www.luya-collection.com" rel="noopener">LUYA Collection ↗</a></li></ul></div>
   </div>
-  <div class="alt"><span>© 2026 LUYA Projects · إسطنبول</span><span>luyaprojects.com</span></div>
+  <div class="alt"><span>© 2026 LUYA Projects · إسطنبول</span><span><a href="privacy.html">إشعار الخصوصية</a> · luyaprojects.com</span></div>
 </div>
 </footer>
 <script>

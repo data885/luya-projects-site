@@ -20,7 +20,7 @@
 <meta name="theme-color" content="#1d1612">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../gorsel/font/CormorantGaramond-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../stil.css?v=e67fd1e3">
+<link rel="stylesheet" href="../stil.css?v=6dd9b740">
 
 </head>
 <body>
@@ -117,6 +117,7 @@
   <fieldset><legend>Требуемые услуги</legend><div class="chips"><label><input type="radio" name="f_kapsam" value="Дизайн + производство + монтаж" required>Дизайн + производство + монтаж</label><label><input type="radio" name="f_kapsam" value="Производство + монтаж по чертежам архитектора">Производство + монтаж по чертежам архитектора</label><label><input type="radio" name="f_kapsam" value="Только производство">Только производство</label><label><input type="radio" name="f_kapsam" value="Пока не определились">Пока не определились</label></div></fieldset>
   <label>О проекте<textarea name="f_not" placeholder="Объект, концепция, бюджетный диапазон, особые пожелания…"></textarea></label>
   <div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+  <label class="onay"><input type="checkbox" name="kvkk_onay" value="evet" required><span>Я ознакомился(-лась) с <a href="privacy.html" target="_blank">уведомлением о конфиденциальности</a> и понимаю, что мои данные будут обрабатываться описанным образом для рассмотрения брифа.</span></label>
   <button class="btn" type="submit">Отправить бриф по e-mail <span class="ar" aria-hidden="true">→</span></button>
   <p class="fnote">Бриф сразу попадает к нашей проектной команде; мы ответим по электронной почте. Планы и изображения можно приложить к ответу на наше письмо.</p>
   <p class="fdurum" role="status" aria-live="polite" hidden></p>
@@ -140,7 +141,7 @@ f.addEventListener('submit',function(ev){ev.preventDefault();
  if(!f.checkValidity()){f.reportValidity();return;}
  var d=new FormData(f);
  if(!UC){taslak(d);return;}
- var veri={dil:DIL,sayfa:location.href,sure:Math.round((Date.now()-t0)/1000),website:d.get('website')||''},k;
+ var veri={dil:DIL,sayfa:location.href,sure:Math.round((Date.now()-t0)/1000),website:d.get('website')||'',kvkk_onay:d.get('kvkk_onay')||''},k;
  for(k in L)veri[k]=(d.get(k)||'').toString().trim();
  btn.disabled=true;durum.hidden=false;durum.textContent=MSG.yuk;
  fetch(UC,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(veri)})
@@ -227,7 +228,7 @@ f.addEventListener('submit',function(ev){ev.preventDefault();
       <h2 class="fh" style="margin-top:28px">Семья LUYA</h2><ul>
       <li><a href="https://www.luya-collection.com" rel="noopener">LUYA Collection ↗</a></li></ul></div>
   </div>
-  <div class="alt"><span>© 2026 LUYA Projects · Стамбул</span><span>luyaprojects.com</span></div>
+  <div class="alt"><span>© 2026 LUYA Projects · Стамбул</span><span><a href="privacy.html">Конфиденциальность</a> · luyaprojects.com</span></div>
 </div>
 </footer>
 <script>

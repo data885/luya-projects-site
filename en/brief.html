@@ -20,7 +20,7 @@
 <meta name="theme-color" content="#1d1612">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../gorsel/font/CormorantGaramond-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../stil.css?v=e67fd1e3">
+<link rel="stylesheet" href="../stil.css?v=6dd9b740">
 
 </head>
 <body>
@@ -117,6 +117,7 @@
   <fieldset><legend>Service required</legend><div class="chips"><label><input type="radio" name="f_kapsam" value="Design + manufacturing + installation" required>Design + manufacturing + installation</label><label><input type="radio" name="f_kapsam" value="Manufacturing + installation to the architect&#x27;s drawings">Manufacturing + installation to the architect&#x27;s drawings</label><label><input type="radio" name="f_kapsam" value="Manufacturing only">Manufacturing only</label><label><input type="radio" name="f_kapsam" value="Not sure yet">Not sure yet</label></div></fieldset>
   <label>About the project<textarea name="f_not" placeholder="Space, concept, budget range, special requirements…"></textarea></label>
   <div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+  <label class="onay"><input type="checkbox" name="kvkk_onay" value="evet" required><span>I have read the <a href="privacy.html" target="_blank">Privacy Notice</a> and understand that my data will be processed as described to evaluate my brief.</span></label>
   <button class="btn" type="submit">Send brief by email <span class="ar" aria-hidden="true">→</span></button>
   <p class="fnote">Your brief goes straight to our project team; we reply by email. You can attach plans and images to our reply.</p>
   <p class="fdurum" role="status" aria-live="polite" hidden></p>
@@ -140,7 +141,7 @@ f.addEventListener('submit',function(ev){ev.preventDefault();
  if(!f.checkValidity()){f.reportValidity();return;}
  var d=new FormData(f);
  if(!UC){taslak(d);return;}
- var veri={dil:DIL,sayfa:location.href,sure:Math.round((Date.now()-t0)/1000),website:d.get('website')||''},k;
+ var veri={dil:DIL,sayfa:location.href,sure:Math.round((Date.now()-t0)/1000),website:d.get('website')||'',kvkk_onay:d.get('kvkk_onay')||''},k;
  for(k in L)veri[k]=(d.get(k)||'').toString().trim();
  btn.disabled=true;durum.hidden=false;durum.textContent=MSG.yuk;
  fetch(UC,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(veri)})
@@ -227,7 +228,7 @@ f.addEventListener('submit',function(ev){ev.preventDefault();
       <h2 class="fh" style="margin-top:28px">LUYA family</h2><ul>
       <li><a href="https://www.luya-collection.com" rel="noopener">LUYA Collection ↗</a></li></ul></div>
   </div>
-  <div class="alt"><span>© 2026 LUYA Projects · Istanbul</span><span>luyaprojects.com</span></div>
+  <div class="alt"><span>© 2026 LUYA Projects · Istanbul</span><span><a href="privacy.html">Privacy Notice</a> · luyaprojects.com</span></div>
 </div>
 </footer>
 <script>

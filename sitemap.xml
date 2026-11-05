@@ -42,6 +42,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/brief.html"/>
   </url>
   <url>
+    <loc>https://luyaprojects.com/tr/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://luyaprojects.com/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/privacy.html"/>
+  </url>
+  <url>
     <loc>https://luyaprojects.com/tr/hotels.html</loc>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/hotels.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/hotels.html"/>
@@ -120,6 +128,14 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/brief.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://luyaprojects.com/ru/brief.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/brief.html"/>
+  </url>
+  <url>
+    <loc>https://luyaprojects.com/en/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://luyaprojects.com/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/privacy.html"/>
   </url>
   <url>
     <loc>https://luyaprojects.com/en/hotels.html</loc>
@@ -202,6 +218,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/brief.html"/>
   </url>
   <url>
+    <loc>https://luyaprojects.com/ar/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://luyaprojects.com/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/privacy.html"/>
+  </url>
+  <url>
     <loc>https://luyaprojects.com/ar/hotels.html</loc>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/hotels.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/hotels.html"/>
@@ -280,6 +304,14 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/brief.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://luyaprojects.com/ru/brief.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/brief.html"/>
+  </url>
+  <url>
+    <loc>https://luyaprojects.com/ru/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://luyaprojects.com/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/privacy.html"/>
   </url>
   <url>
     <loc>https://luyaprojects.com/ru/hotels.html</loc>

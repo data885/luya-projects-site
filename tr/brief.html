@@ -20,7 +20,7 @@
 <meta name="theme-color" content="#1d1612">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../gorsel/font/CormorantGaramond-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../stil.css?v=e67fd1e3">
+<link rel="stylesheet" href="../stil.css?v=6dd9b740">
 
 </head>
 <body>
@@ -117,6 +117,7 @@
   <fieldset><legend>İstenen hizmet</legend><div class="chips"><label><input type="radio" name="f_kapsam" value="Tasarım + üretim + montaj" required>Tasarım + üretim + montaj</label><label><input type="radio" name="f_kapsam" value="Mimarın çizimine göre üretim + montaj">Mimarın çizimine göre üretim + montaj</label><label><input type="radio" name="f_kapsam" value="Sadece üretim">Sadece üretim</label><label><input type="radio" name="f_kapsam" value="Henüz emin değilim">Henüz emin değilim</label></div></fieldset>
   <label>Proje hakkında<textarea name="f_not" placeholder="Mekân, konsept, bütçe aralığı, özel istekler…"></textarea></label>
   <div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+  <label class="onay"><input type="checkbox" name="kvkk_onay" value="evet" required><span><a href="privacy.html" target="_blank">KVKK Aydınlatma Metni</a>'ni okudum; brief'imin değerlendirilmesi için verilerimin bu metinde açıklandığı şekilde işleneceğini biliyorum.</span></label>
   <button class="btn" type="submit">Brief&#x27;i e-postayla gönder <span class="ar" aria-hidden="true">→</span></button>
   <p class="fnote">Brief doğrudan proje ekibimize ulaşır; size e-postayla dönüyoruz. Plan ve görselleri cevabımıza ekleyebilirsiniz.</p>
   <p class="fdurum" role="status" aria-live="polite" hidden></p>
@@ -140,7 +141,7 @@ f.addEventListener('submit',function(ev){ev.preventDefault();
  if(!f.checkValidity()){f.reportValidity();return;}
  var d=new FormData(f);
  if(!UC){taslak(d);return;}
- var veri={dil:DIL,sayfa:location.href,sure:Math.round((Date.now()-t0)/1000),website:d.get('website')||''},k;
+ var veri={dil:DIL,sayfa:location.href,sure:Math.round((Date.now()-t0)/1000),website:d.get('website')||'',kvkk_onay:d.get('kvkk_onay')||''},k;
  for(k in L)veri[k]=(d.get(k)||'').toString().trim();
  btn.disabled=true;durum.hidden=false;durum.textContent=MSG.yuk;
  fetch(UC,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(veri)})
@@ -227,7 +228,7 @@ f.addEventListener('submit',function(ev){ev.preventDefault();
       <h2 class="fh" style="margin-top:28px">LUYA ailesi</h2><ul>
       <li><a href="https://www.luya-collection.com" rel="noopener">LUYA Collection ↗</a></li></ul></div>
   </div>
-  <div class="alt"><span>© 2026 LUYA Projects · İstanbul</span><span>luyaprojects.com</span></div>
+  <div class="alt"><span>© 2026 LUYA Projects · İstanbul</span><span><a href="privacy.html">KVKK Aydınlatma Metni</a> · luyaprojects.com</span></div>
 </div>
 </footer>
 <script>

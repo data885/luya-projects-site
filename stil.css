@@ -441,6 +441,16 @@ footer address span[dir],.side address span[dir]{display:block; unicode-bidi:iso
 html[dir="rtl"] footer address span[dir],html[dir="rtl"] .side address span[dir]{text-align:right}
 footer address .ofis,.side address>span:first-child{display:block; font-size:11px; letter-spacing:.14em; text-transform:uppercase; opacity:.7; margin-bottom:4px}
 html[dir="rtl"] footer address .ofis,html[dir="rtl"] .side address>span:first-child{letter-spacing:0}
+form .onay{text-transform:none; letter-spacing:0; font-weight:400; font-size:14px}
+.onay{display:flex; gap:10px; align-items:flex-start; font-size:14px; line-height:1.5; color:var(--muted); margin:6px 0 18px}
+.onay input{width:18px; height:18px; margin-top:2px; flex:none; accent-color:var(--bronze)}
+.onay a{color:var(--ink)}
+.kvkk{max-width:76ch}
+.kvkk h2{font-size:clamp(20px,2vw,24px); margin:40px 0 12px}
+.kvkk p,.kvkk li{line-height:1.7; color:var(--ink)}
+.kvkk ul{padding-inline-start:20px}
+.kvkk .meta{font-size:13px; color:var(--faint); margin-top:36px}
+footer .alt a{color:inherit}
 footer .fh{font-family:var(--f-sans); font-size:11px; line-height:1.4; letter-spacing:.2em; text-transform:uppercase; color:var(--dark-ink); margin:0 0 14px; font-weight:600}
 html[dir="rtl"] footer .fh{letter-spacing:0; font-size:13px}
 footer ul{list-style:none; margin:0; padding:0}

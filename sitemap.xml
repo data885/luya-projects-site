@@ -3,6 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://luyaprojects.com/tr/</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/"/>
@@ -11,6 +12,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/tr/process.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/process.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/process.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/process.html"/>
@@ -19,6 +21,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/tr/production.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/production.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/production.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/production.html"/>
@@ -27,6 +30,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/tr/projects.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/projects.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/projects.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/projects.html"/>
@@ -35,6 +39,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/tr/brief.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/brief.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/brief.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/brief.html"/>
@@ -42,15 +47,8 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/brief.html"/>
   </url>
   <url>
-    <loc>https://luyaprojects.com/tr/privacy.html</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://luyaprojects.com/ru/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/privacy.html"/>
-  </url>
-  <url>
     <loc>https://luyaprojects.com/tr/hotels.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/hotels.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/hotels.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/hotels.html"/>
@@ -59,6 +57,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/tr/restaurants-cafes.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/restaurants-cafes.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/restaurants-cafes.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/restaurants-cafes.html"/>
@@ -67,6 +66,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/tr/villas-residences.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/villas-residences.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/villas-residences.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/villas-residences.html"/>
@@ -75,6 +75,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/tr/airports-terminals.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/airports-terminals.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/airports-terminals.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/airports-terminals.html"/>
@@ -83,6 +84,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/tr/workplace.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/workplace.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/workplace.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/workplace.html"/>
@@ -91,6 +93,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/en/</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/"/>
@@ -99,6 +102,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/en/process.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/process.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/process.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/process.html"/>
@@ -107,6 +111,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/en/production.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/production.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/production.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/production.html"/>
@@ -115,6 +120,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/en/projects.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/projects.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/projects.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/projects.html"/>
@@ -123,6 +129,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/en/brief.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/brief.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/brief.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/brief.html"/>
@@ -130,15 +137,8 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/brief.html"/>
   </url>
   <url>
-    <loc>https://luyaprojects.com/en/privacy.html</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://luyaprojects.com/ru/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/privacy.html"/>
-  </url>
-  <url>
     <loc>https://luyaprojects.com/en/hotels.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/hotels.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/hotels.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/hotels.html"/>
@@ -147,6 +147,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/en/restaurants-cafes.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/restaurants-cafes.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/restaurants-cafes.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/restaurants-cafes.html"/>
@@ -155,6 +156,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/en/villas-residences.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/villas-residences.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/villas-residences.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/villas-residences.html"/>
@@ -163,6 +165,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/en/airports-terminals.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/airports-terminals.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/airports-terminals.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/airports-terminals.html"/>
@@ -171,6 +174,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/en/workplace.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/workplace.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/workplace.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/workplace.html"/>
@@ -179,6 +183,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/ar/</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/"/>
@@ -187,6 +192,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/ar/process.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/process.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/process.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/process.html"/>
@@ -195,6 +201,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/ar/production.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/production.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/production.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/production.html"/>
@@ -203,6 +210,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/ar/projects.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/projects.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/projects.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/projects.html"/>
@@ -211,6 +219,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/ar/brief.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/brief.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/brief.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/brief.html"/>
@@ -218,15 +227,8 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/brief.html"/>
   </url>
   <url>
-    <loc>https://luyaprojects.com/ar/privacy.html</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://luyaprojects.com/ru/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/privacy.html"/>
-  </url>
-  <url>
     <loc>https://luyaprojects.com/ar/hotels.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/hotels.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/hotels.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/hotels.html"/>
@@ -235,6 +237,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/ar/restaurants-cafes.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/restaurants-cafes.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/restaurants-cafes.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/restaurants-cafes.html"/>
@@ -243,6 +246,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/ar/villas-residences.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/villas-residences.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/villas-residences.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/villas-residences.html"/>
@@ -251,6 +255,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/ar/airports-terminals.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/airports-terminals.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/airports-terminals.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/airports-terminals.html"/>
@@ -259,6 +264,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/ar/workplace.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/workplace.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/workplace.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/workplace.html"/>
@@ -267,6 +273,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/ru/</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/"/>
@@ -275,6 +282,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/ru/process.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/process.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/process.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/process.html"/>
@@ -283,6 +291,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/ru/production.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/production.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/production.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/production.html"/>
@@ -291,6 +300,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/ru/projects.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/projects.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/projects.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/projects.html"/>
@@ -299,6 +309,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/ru/brief.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/brief.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/brief.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/brief.html"/>
@@ -306,15 +317,8 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/brief.html"/>
   </url>
   <url>
-    <loc>https://luyaprojects.com/ru/privacy.html</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://luyaprojects.com/ru/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/privacy.html"/>
-  </url>
-  <url>
     <loc>https://luyaprojects.com/ru/hotels.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/hotels.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/hotels.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/hotels.html"/>
@@ -323,6 +327,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/ru/restaurants-cafes.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/restaurants-cafes.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/restaurants-cafes.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/restaurants-cafes.html"/>
@@ -331,6 +336,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/ru/villas-residences.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/villas-residences.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/villas-residences.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/villas-residences.html"/>
@@ -339,6 +345,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/ru/airports-terminals.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/airports-terminals.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/airports-terminals.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/airports-terminals.html"/>
@@ -347,6 +354,7 @@
   </url>
   <url>
     <loc>https://luyaprojects.com/ru/workplace.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/workplace.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/workplace.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/workplace.html"/>

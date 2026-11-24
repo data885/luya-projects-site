@@ -135,7 +135,7 @@ html[dir="rtl"]{ --f-serif:"Noto Kufi Arabic",serif; --f-sans:"Noto Kufi Arabic"
 html{scroll-behavior:smooth}
 body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--f-sans);
   font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased; overflow-x:hidden}
-img{max-width:100%; display:block}
+img{max-width:100%; height:auto; display:block}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--bronze); outline-offset:3px}
 .wrap{max-width:var(--w); margin:0 auto; padding-inline:var(--gut)}
@@ -498,7 +498,7 @@ footer .alt{margin-top:48px; padding-top:20px; border-top:1px solid rgba(239,231
 .lb{position:fixed; inset:0; z-index:100; background:rgba(20,15,12,.97); display:flex; align-items:center; justify-content:center; padding:56px 70px}
 .lb[hidden]{display:none}
 .lb figure{margin:0; max-width:100%; max-height:100%; display:flex; flex-direction:column; align-items:center}
-.lb img{max-width:100%; max-height:calc(100vh - 150px); object-fit:contain}
+.lb img{max-width:100%; max-height:calc(100vh - 150px); width:auto; height:auto; object-fit:contain}
 .lb figcaption{color:var(--dark-muted); font-size:13.5px; margin-top:14px; text-align:center; letter-spacing:.02em; text-transform:none}
 .lb button{position:absolute; background:none; border:1px solid rgba(239,231,220,.3); color:var(--dark-ink); cursor:pointer; width:48px; height:48px; font-size:22px}
 .lb button:hover{border-color:var(--dark-ink)}

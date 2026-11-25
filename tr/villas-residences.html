@@ -33,7 +33,7 @@
 <meta name="theme-color" content="#1d1612">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../gorsel/font/CormorantGaramond-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../stil.css?v=324e2a50">
+<link rel="stylesheet" href="../stil.css?v=63f859e1">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LEVT55EHL"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-4LEVT55EHL");</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Villa & Rezidans", "serviceType": "Villa & Rezidans", "description": "Özel villalar ve konut projeleri için anahtar teslim mobilya: salon, yatak odası, mutfak adası, gardırop, dış mekân. Özel ölçü, tek muhatap.", "url": "https://luyaprojects.com/tr/villas-residences.html", "image": "https://luyaprojects.com/gorsel/projeler/mutfak-banyo/06.webp", "provider": {"@type": "Organization", "@id": "https://luyaprojects.com/#organization", "name": "LUYA Projects"}}</script>
@@ -108,6 +108,7 @@
     <a href="process.html">Süreç</a>
     <a href="production.html">Üretim</a>
     <a href="projects.html">Projeler</a>
+    <a href="guides.html">Rehberler</a>
     <a class="btn" href="brief.html">Brief gönder</a>
     <div class="langs m"><a href="../tr/villas-residences.html" hreflang="tr" lang="tr" aria-current="true">TR</a><a href="../en/villas-residences.html" hreflang="en" lang="en">EN</a><a href="../ar/villas-residences.html" hreflang="ar" lang="ar">ع</a><a href="../ru/villas-residences.html" hreflang="ru" lang="ru">RU</a></div>
   </nav>
@@ -211,6 +212,7 @@
       <li><a href="process.html">Süreç</a></li>
       <li><a href="production.html">Üretim</a></li>
       <li><a href="projects.html">Projeler</a></li>
+      <li><a href="guides.html">Rehberler</a></li>
       <li><a href="brief.html">Brief gönder</a></li></ul></div>
     <div><h2 class="fh">İletişim</h2><ul>
       <li><a href="mailto:info@luyaprojects.com">info@luyaprojects.com</a></li>
@@ -225,7 +227,16 @@
 </footer>
 <script>
 (function(){var t=document.getElementById('top'),b=t&&t.querySelector('.menu-btn');
-if(b)b.addEventListener('click',function(){var a=t.classList.toggle('acik');b.setAttribute('aria-expanded',a)});})();
+if(b)b.addEventListener('click',function(){var a=t.classList.toggle('acik');b.setAttribute('aria-expanded',a)});
+document.addEventListener('click',function(ev){
+  var a=ev.target&&ev.target.closest?ev.target.closest('a'):null;
+  if(!a||typeof gtag!=='function')return;
+  var h=(a.getAttribute('href')||'').toLowerCase();
+  if(a.dataset.event==='catalog_download'||h.endsWith('.pdf'))gtag('event','catalog_download',{link_url:h});
+  else if(h.indexOf('wa.me')>-1||h.indexOf('whatsapp')>-1)gtag('event','whatsapp_click',{link_url:h});
+  else if(h.indexOf('tel:')===0)gtag('event','phone_click',{link_url:h});
+  else if(h.indexOf('mailto:')===0)gtag('event','email_click',{link_url:h});
+});})();
 </script>
 </body>
 </html>

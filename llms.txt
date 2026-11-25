@@ -1,0 +1,20 @@
+# LUYA Projects
+
+> Turnkey contract furniture manufacturer & architectural joinery partner in Istanbul, Turkey (fixed millwork + loose FF&E for hotels, restaurants, luxury villas, retail fit-out, corporate HQs).
+
+## Core Languages
+- English: https://luyaprojects.com/en/
+- Turkish: https://luyaprojects.com/tr/
+- Arabic: https://luyaprojects.com/ar/
+- Russian: https://luyaprojects.com/ru/
+
+## Specifier Guides & Technical Library
+- Technical Guides Hub (EN): https://luyaprojects.com/en/guides.html
+- Teknik Rehberler Merkezi (TR): https://luyaprojects.com/tr/guides.html
+- Downloadable Tender Specification PDF: https://luyaprojects.com/dokuman/LUYA-Teknik-Sartname-Kilavuzu-2026.pdf
+- Hotel FF&E & Mock-Up Room Protocol: https://luyaprojects.com/en/guide-hotel-specs.html
+- Fire-Retardant Standards (EN 13501-1 / BS 5852 / CAL 117): https://luyaprojects.com/en/guide-fire-standards.html
+- Luxury Villa Turnkey Millwork: https://luyaprojects.com/tr/guide-villa-turnkey.html
+- Retail Night-Shift Fit-Out: https://luyaprojects.com/tr/guide-retail-fitout.html
+- Factory HQ & Office Acoustic Woodwork: https://luyaprojects.com/tr/guide-factory-office.html
+- Project Brief / RFQ: https://luyaprojects.com/en/brief.html

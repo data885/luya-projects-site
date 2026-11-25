@@ -38,6 +38,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/projects.html"/>
   </url>
   <url>
+    <loc>https://luyaprojects.com/tr/guides.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/guides.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/guides.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/guides.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://luyaprojects.com/ru/guides.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/guides.html"/>
+  </url>
+  <url>
     <loc>https://luyaprojects.com/tr/brief.html</loc>
     <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/brief.html"/>
@@ -126,6 +135,15 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/projects.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://luyaprojects.com/ru/projects.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/projects.html"/>
+  </url>
+  <url>
+    <loc>https://luyaprojects.com/en/guides.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/guides.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/guides.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/guides.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://luyaprojects.com/ru/guides.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/guides.html"/>
   </url>
   <url>
     <loc>https://luyaprojects.com/en/brief.html</loc>
@@ -218,6 +236,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/projects.html"/>
   </url>
   <url>
+    <loc>https://luyaprojects.com/ar/guides.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/guides.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/guides.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/guides.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://luyaprojects.com/ru/guides.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/guides.html"/>
+  </url>
+  <url>
     <loc>https://luyaprojects.com/ar/brief.html</loc>
     <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/brief.html"/>
@@ -308,6 +335,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/projects.html"/>
   </url>
   <url>
+    <loc>https://luyaprojects.com/ru/guides.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/guides.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/guides.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/guides.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://luyaprojects.com/ru/guides.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/guides.html"/>
+  </url>
+  <url>
     <loc>https://luyaprojects.com/ru/brief.html</loc>
     <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/brief.html"/>
@@ -360,5 +396,89 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://luyaprojects.com/ar/workplace.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://luyaprojects.com/ru/workplace.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/workplace.html"/>
+  </url>
+  <url>
+    <loc>https://luyaprojects.com/tr/guide-hotel-specs.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/guide-hotel-specs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/guide-hotel-specs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/guide-hotel-specs.html"/>
+  </url>
+  <url>
+    <loc>https://luyaprojects.com/tr/guide-fire-standards.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/guide-fire-standards.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/guide-fire-standards.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/guide-fire-standards.html"/>
+  </url>
+  <url>
+    <loc>https://luyaprojects.com/tr/guide-villa-turnkey.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/guide-villa-turnkey.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/guide-villa-turnkey.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/guide-villa-turnkey.html"/>
+  </url>
+  <url>
+    <loc>https://luyaprojects.com/tr/guide-retail-fitout.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/guide-retail-fitout.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/guide-retail-fitout.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/guide-retail-fitout.html"/>
+  </url>
+  <url>
+    <loc>https://luyaprojects.com/tr/guide-factory-office.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/guide-factory-office.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/guide-factory-office.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/guide-factory-office.html"/>
+  </url>
+  <url>
+    <loc>https://luyaprojects.com/tr/guide-cnc-production.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/guide-cnc-production.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/guide-cnc-production.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/guide-cnc-production.html"/>
+  </url>
+  <url>
+    <loc>https://luyaprojects.com/en/guide-hotel-specs.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/guide-hotel-specs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/guide-hotel-specs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/guide-hotel-specs.html"/>
+  </url>
+  <url>
+    <loc>https://luyaprojects.com/en/guide-fire-standards.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/guide-fire-standards.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/guide-fire-standards.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/guide-fire-standards.html"/>
+  </url>
+  <url>
+    <loc>https://luyaprojects.com/en/guide-villa-turnkey.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/guide-villa-turnkey.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/guide-villa-turnkey.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/guide-villa-turnkey.html"/>
+  </url>
+  <url>
+    <loc>https://luyaprojects.com/en/guide-retail-fitout.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/guide-retail-fitout.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/guide-retail-fitout.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/guide-retail-fitout.html"/>
+  </url>
+  <url>
+    <loc>https://luyaprojects.com/en/guide-factory-office.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/guide-factory-office.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/guide-factory-office.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/guide-factory-office.html"/>
+  </url>
+  <url>
+    <loc>https://luyaprojects.com/en/guide-cnc-production.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://luyaprojects.com/tr/guide-cnc-production.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://luyaprojects.com/en/guide-cnc-production.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luyaprojects.com/en/guide-cnc-production.html"/>
   </url>
 </urlset>

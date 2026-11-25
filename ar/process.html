@@ -33,8 +33,8 @@
 <meta name="theme-color" content="#1d1612">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../gorsel/font/NotoKufiArabic-arabic.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../font-ar.css?v=324e2a50">
-<link rel="stylesheet" href="../stil.css?v=324e2a50">
+<link rel="stylesheet" href="../font-ar.css?v=63f859e1">
+<link rel="stylesheet" href="../stil.css?v=63f859e1">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LEVT55EHL"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-4LEVT55EHL");</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "لدينا معماري، فهل تقدّمون التصميم أيضاً؟", "acceptedAnswer": {"@type": "Answer", "text": "كلا الخيارين ممكن. إما أن نأخذ مفهوم المعماري ونحوّله إلى رسومات فنية وتصنيع؛ وفي المشاريع بلا معماري نقدّم الدعم المعماري ونطوّر المفهوم من البداية. ويُحدَّد النطاق حسب المشروع."}}, {"@type": "Question", "name": "هل هناك حدّ أدنى لحجم المشروع؟", "acceptedAnswer": {"@type": "Answer", "text": "مقهى واحد أو فندق من مئات الغرف، كلاهما ممكن. نبني الفريق والجدول الزمني معكم وفق حجم المشروع."}}, {"@type": "Question", "name": "ما مدة التسليم؟", "acceptedAnswer": {"@type": "Answer", "text": "تختلف حسب النطاق والمواد والكميات. نضع الجدول الزمني معكم في مرحلة المعاينة، بالعدّ التنازلي من موعد الافتتاح."}}, {"@type": "Question", "name": "هل تنفّذون مشاريع خارج تركيا؟", "acceptedAnswer": {"@type": "Answer", "text": "نعم. نتولّى تنظيم الشحن والتركيب للمشاريع في دول الخليج والجمهوريات التركية وأوروبا."}}, {"@type": "Question", "name": "هل تقدّمون التصنيع فقط؟", "acceptedAnswer": {"@type": "Answer", "text": "نعم. للمشاريع التي تتوفر لديها رسومات معتمدة أو مواصفات FF&E جاهزة، نقدّم عرضاً مباشراً للتصنيع والتركيب."}}]}</script>
@@ -110,6 +110,7 @@
     <a href="process.html" aria-current="page">آلية العمل</a>
     <a href="production.html">التصنيع</a>
     <a href="projects.html">المشاريع</a>
+    <a href="guides.html">الأدلة</a>
     <a class="btn" href="brief.html">أرسل الموجز</a>
     <div class="langs m"><a href="../tr/process.html" hreflang="tr" lang="tr">TR</a><a href="../en/process.html" hreflang="en" lang="en">EN</a><a href="../ar/process.html" hreflang="ar" lang="ar" aria-current="true">ع</a><a href="../ru/process.html" hreflang="ru" lang="ru">RU</a></div>
   </nav>
@@ -202,6 +203,7 @@
       <li><a href="process.html">آلية العمل</a></li>
       <li><a href="production.html">التصنيع</a></li>
       <li><a href="projects.html">المشاريع</a></li>
+      <li><a href="guides.html">الأدلة</a></li>
       <li><a href="brief.html">أرسل الموجز</a></li></ul></div>
     <div><h2 class="fh">تواصل معنا</h2><ul>
       <li><a href="mailto:info@luyaprojects.com">info@luyaprojects.com</a></li>
@@ -216,7 +218,16 @@
 </footer>
 <script>
 (function(){var t=document.getElementById('top'),b=t&&t.querySelector('.menu-btn');
-if(b)b.addEventListener('click',function(){var a=t.classList.toggle('acik');b.setAttribute('aria-expanded',a)});})();
+if(b)b.addEventListener('click',function(){var a=t.classList.toggle('acik');b.setAttribute('aria-expanded',a)});
+document.addEventListener('click',function(ev){
+  var a=ev.target&&ev.target.closest?ev.target.closest('a'):null;
+  if(!a||typeof gtag!=='function')return;
+  var h=(a.getAttribute('href')||'').toLowerCase();
+  if(a.dataset.event==='catalog_download'||h.endsWith('.pdf'))gtag('event','catalog_download',{link_url:h});
+  else if(h.indexOf('wa.me')>-1||h.indexOf('whatsapp')>-1)gtag('event','whatsapp_click',{link_url:h});
+  else if(h.indexOf('tel:')===0)gtag('event','phone_click',{link_url:h});
+  else if(h.indexOf('mailto:')===0)gtag('event','email_click',{link_url:h});
+});})();
 </script>
 </body>
 </html>

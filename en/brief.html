@@ -33,7 +33,7 @@
 <meta name="theme-color" content="#1d1612">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../gorsel/font/CormorantGaramond-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../stil.css?v=324e2a50">
+<link rel="stylesheet" href="../stil.css?v=63f859e1">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LEVT55EHL"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-4LEVT55EHL");</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ContactPage", "name": "Send a project brief | LUYA Projects", "description": "Tell us about your project: type of space, location, scale, timeline. We'll come back with scope, a roadmap and a quotation framework.", "url": "https://luyaprojects.com/en/brief.html", "mainEntity": {"@id": "https://luyaprojects.com/#organization"}}</script>
@@ -107,6 +107,7 @@
     <a href="process.html">Process</a>
     <a href="production.html">Manufacturing</a>
     <a href="projects.html">Projects</a>
+    <a href="guides.html">Guides</a>
     <a class="btn" href="brief.html" aria-current="page">Send a brief</a>
     <div class="langs m"><a href="../tr/brief.html" hreflang="tr" lang="tr">TR</a><a href="../en/brief.html" hreflang="en" lang="en" aria-current="true">EN</a><a href="../ar/brief.html" hreflang="ar" lang="ar">ع</a><a href="../ru/brief.html" hreflang="ru" lang="ru">RU</a></div>
   </nav>
@@ -140,7 +141,8 @@
 </form>
 <div class="tesekkur" id="tesekkur" hidden tabindex="-1"><span class="k">✓</span><h2>We&#x27;ve received your brief.</h2><p>Thank you. We&#x27;ll read your brief and get back to you by email shortly. To send plans or images, simply reply to that email.</p></div>
 <aside class="side"><h2>What happens after the brief</h2><ol><li>We read your brief and ask about anything missing.</li><li>A short intro call (online or on site).</li><li>Scope list, roadmap and quotation framework.</li></ol>
-  <div class="mail">Prefer to write directly?<a href="mailto:info@luyaprojects.com">info@luyaprojects.com</a><a href="tel:+905546691453" dir="ltr">+90 554 669 14 53</a></div>
+  <div class="mail">Prefer to write directly?<a href="mailto:info@luyaprojects.com">info@luyaprojects.com</a><a href="tel:+905546691453" dir="ltr">+90 554 669 14 53</a>
+  <a href="../dokuman/LUYA-Teknik-Sartname-Kilavuzu-2026.pdf" target="_blank" rel="noopener" data-event="catalog_download">Download Technical Guide (PDF) ↗</a></div>
   <address class="mail"><span>Office</span><span dir="ltr">Aydıntepe Mah. Hudut Sok. No:1 D:4<br>Tuzla / İstanbul</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Ayd%C4%B1ntepe%20Mahallesi%20Hudut%20Sokak%20No%3A1%20Tuzla%20%C4%B0stanbul" rel="noopener" target="_blank">Open in Maps ↗</a></address></aside>
 </div></section>
 <script>
@@ -152,6 +154,7 @@ t0=Date.now(),durum=f.querySelector('.fdurum'),btn=f.querySelector('button[type=
 function taslak(d){var satir=[],k;
  for(k in L){var v=(d.get(k)||'').toString().trim(); if(v) satir.push(L[k]+': '+v);}
  var s=SUB+' — '+(d.get('f_tip')||'')+(d.get('f_konum')?' — '+d.get('f_konum'):'');
+ if(typeof gtag==='function')gtag('event','generate_lead',{event_category:'brief_mailto',language:DIL});
  location.href='mailto:'+TO+'?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(satir.join('\n'));}
 f.addEventListener('submit',function(ev){ev.preventDefault();
  if(!f.checkValidity()){f.reportValidity();return;}
@@ -163,6 +166,7 @@ f.addEventListener('submit',function(ev){ev.preventDefault();
  fetch(UC,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(veri)})
   .then(function(r){return r.json()})
   .then(function(j){if(!j||!j.ok)throw 0;
+    if(typeof gtag==='function')gtag('event','generate_lead',{event_category:'brief_form',language:DIL});
     f.hidden=true;var t=document.getElementById('tesekkur');t.hidden=false;t.focus();
     try{window.scrollTo({top:t.getBoundingClientRect().top+scrollY-120})}catch(e){}})
   .catch(function(){durum.textContent=MSG.hata;btn.disabled=false;setTimeout(function(){taslak(d)},1200)});
@@ -235,6 +239,7 @@ f.addEventListener('submit',function(ev){ev.preventDefault();
       <li><a href="process.html">Process</a></li>
       <li><a href="production.html">Manufacturing</a></li>
       <li><a href="projects.html">Projects</a></li>
+      <li><a href="guides.html">Guides</a></li>
       <li><a href="brief.html">Send a brief</a></li></ul></div>
     <div><h2 class="fh">Contact</h2><ul>
       <li><a href="mailto:info@luyaprojects.com">info@luyaprojects.com</a></li>
@@ -249,7 +254,16 @@ f.addEventListener('submit',function(ev){ev.preventDefault();
 </footer>
 <script>
 (function(){var t=document.getElementById('top'),b=t&&t.querySelector('.menu-btn');
-if(b)b.addEventListener('click',function(){var a=t.classList.toggle('acik');b.setAttribute('aria-expanded',a)});})();
+if(b)b.addEventListener('click',function(){var a=t.classList.toggle('acik');b.setAttribute('aria-expanded',a)});
+document.addEventListener('click',function(ev){
+  var a=ev.target&&ev.target.closest?ev.target.closest('a'):null;
+  if(!a||typeof gtag!=='function')return;
+  var h=(a.getAttribute('href')||'').toLowerCase();
+  if(a.dataset.event==='catalog_download'||h.endsWith('.pdf'))gtag('event','catalog_download',{link_url:h});
+  else if(h.indexOf('wa.me')>-1||h.indexOf('whatsapp')>-1)gtag('event','whatsapp_click',{link_url:h});
+  else if(h.indexOf('tel:')===0)gtag('event','phone_click',{link_url:h});
+  else if(h.indexOf('mailto:')===0)gtag('event','email_click',{link_url:h});
+});})();
 </script>
 </body>
 </html>

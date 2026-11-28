@@ -11,6 +11,8 @@
 ## Specifier Guides & Technical Library
 - Technical Guides Hub (EN): https://luyaprojects.com/en/guides.html
 - Teknik Rehberler Merkezi (TR): https://luyaprojects.com/tr/guides.html
+- الأدلة الفنية (AR): https://luyaprojects.com/ar/guides.html
+- Технические руководства (RU): https://luyaprojects.com/ru/guides.html
 - Downloadable Tender Specification PDF: https://luyaprojects.com/dokuman/LUYA-Teknik-Sartname-Kilavuzu-2026.pdf
 - Hotel FF&E & Mock-Up Room Protocol: https://luyaprojects.com/en/guide-hotel-specs.html
 - Fire-Retardant Standards (EN 13501-1 / BS 5852 / CAL 117): https://luyaprojects.com/en/guide-fire-standards.html
